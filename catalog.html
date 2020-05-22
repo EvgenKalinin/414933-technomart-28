@@ -8,10 +8,14 @@
     <header>
         <div>
           <a href="index.html">Техномарт</a>
-          <span>Поиск:</span>        
-          <a href ="blank.html"Закладки: ></a><span>0</span></a>
-        <a href ="blank.html">Корзина: <span>10</span></a>
-          <a href="blank.html">Оформить заказ</a>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <label for="search"><span>Поиск:</span></label>
+            <input type="search" id="search" name="search">
+            <button class="visually-hidden" type="submit">Найти</button>
+          </form>        
+            <a href ="blank.html">Закладки: <span>0</span></a>
+            <a href ="blank.html">Корзина: <span>10</span></a>
+            <a href="blank.html">Оформить заказ</a>
         </div>
         <p>Интернет-магазин строительных материалов и ниструментов для ремонта</p>
         <a href="blank.html">+7 (812) 555-05-55</a>
@@ -38,7 +42,7 @@
         </nav>
       </header>
       <main>
-        <h1>Перфораторы</h1>
+        <h1 class="visually-hidden">Перфораторы</h1>
         <ul>
             <li><a href="index.html">Главная</a></li>
             <li><a href="catalog.html">Каталог</a></li>
@@ -47,6 +51,7 @@
         </ul>
         
         <div>
+            <h2 class="visually-hidden">Сортировка товаров:</h2>
             <span>Сортировка:</span>
             <button type="submit">По цене</button>
             <button type="submit">По типу</button>
@@ -55,29 +60,33 @@
             <button type="submit">По убыванию</button>
         </div>
         <section>
-            <div>
-                <span>фильтр:</span>
-                <span>Цена:</span>
-            </div>
-            <div>
-                <h2>Производители:</h2>
-                <ul>
-                    <li>Basch</li>
-                    <li>Интерскол</li>
-                    <li>Makita</li>
-                    <li>Dewalt</li>
-                    <li>Hitachi</li>
-                </ul>
-            </div>
-            <div>
-                <h2>Питание:</h2>
-                <ul>
-                    <li>Аккумуляторные</li>
-                    <li>Сетевые</li>
-                </ul>
-            </div>
+            <h2 class="visually-hidden">Фильтр товаров</h2>
+            <form action="https://echo.htmlacademy.ru" method="post">
+                <div>
+                    <span>фильтр:</span>
+                    <h3>Цена:</h3>
+                </div>
+                <div>
+                    <h3>Производители:</h3>
+                    
+                        <label><input type="checkbox" name="manufacturer" value="bosch" checked>Bosch</label>
+                        <label><input type="checkbox" name="manufacturer" value="interskol">Интерскол</label>
+                        <label><input type="checkbox" name="manufacturer" value="makita" checked>Makita</label>
+                        <label><input type="checkbox" name="manufacturer" value="dewalt">Dewalt</label>
+                        <label><input type="checkbox" name="manufacturer" value="hitachi">Hitachi</label>
+                    
+                </div>
+                <div>
+                    <h3>Питание:</h3>
+                    
+                        <label><input type="radio" name="power-options" value="wireless" checked>Аккумуляторные</label>
+                        <label><input type="radio" name="power-options" value="wireline">Сетевые</label>
+                    
+                </div>
+                <button type="submit">Показать</button>
+            </form>
         </section>
-        <button type="submit">Показать</button>
+        
         <section>
             <h2>Список товаров</h2>
             <ul>
@@ -276,5 +285,11 @@
           </p>
         </div>
       </footer>
+      <section>
+          <p><strong>Товар добавлен в корзину!</strong></p>
+          <a href="blank.html">Оформить заказ</a>
+          <a href="blank.html">Продолжить покупки</a>
+          <button type="button"><span>Закрыть окно</span></button>
+      </section>
   </body>
 </html>  

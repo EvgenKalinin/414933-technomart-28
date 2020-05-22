@@ -8,8 +8,12 @@
     <header>
       <div>
         <span>Техномарт</span>
-        <span>Поиск:</span>        
-        <a href ="blank.html"Закладки: ></a><span>0</span></a>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <label for="search"><span>Поиск:</span></label>
+          <input type="search" id="search" name="search">
+          <button class="visually-hidden" type="submit">Найти</button>
+        </form>        
+        <a href ="blank.html">Закладки: <span>0</span></a>
         <a href ="blank.html">Корзина: <span>0</span></a>
         <a href="blank.html">Оформить заказ</a>
       </div>
@@ -34,7 +38,7 @@
     </header>
     <main>
       <section>
-        <h1>Техномарт</h1>
+        <h1 class="visually-hidden">Техномарт</h1>
         <ul>
           <li>
             <h3>Материалы</h3>
@@ -61,6 +65,9 @@
         <div class="slider">
           <h3>Перфораторы</h3>
           <p>Настоящие мужские игрушки</p>
+          <a href="catalog.html">Открыть каталог</a>
+          <h3>Дрели</h3>
+          <p>Соседям на радость!</p>
           <a href="catalog.html">Открыть каталог</a>
         </div>
       </section>
@@ -238,5 +245,23 @@
         </p>
       </div>
     </footer>
+    <section>
+      <h2 class="visually-hidden">Большая карта</h2>
+      <img src="img/big-map.jpg" alt="Большая карта">
+      <button type="button"><span>Закрыть карту</span></button>
+    </section>
+    <section>
+      <h2 class="visually-hidden">Форма отправки сообщения</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label for="name">Ваше имя:</label><br>
+        <input type="text" id="name" name="name" placeholder="Имя Фамилия" required><br>
+        <label for="email">Ваш e-mail:</label><br>
+        <input type="email" id="email" name="email" placeholder="email@example.com" required><br>
+        <label for="message">Текст письма:</label><br>
+        <input type="textarea" id="message" name="message" placeholder="В свободной форме" required><br>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button"><span>Закрыть форму</span></button>
+    </section>
   </body>
 </html>
