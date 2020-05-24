@@ -61,10 +61,19 @@
         </div>
         <section>
             <h2 class="visually-hidden">Фильтр товаров</h2>
-            <form action="https://echo.htmlacademy.ru" method="post">
+            <form action="https://echo.htmlacademy.ru" method="post" oninput="minpriceoutput.value = minprice.value; maxpriceoutput.value = maxprice.value">
                 <div>
                     <span>фильтр:</span>
                     <h3>Цена:</h3>
+                    <label class="visually-hidden" for="minprice">Укажите минимальную цену</label>
+                    <input type="range" id="minprice" name="minprice" min="0" max="100000" value="0" step="1">
+                    <label class="visually-hidden" for="maxprice">Укажите максимальную цену</label>
+                    <input type="range" id="maxprice" name="maxprice" min="0" max="100000" step="1" value="30000" multiple>
+                    <div>  
+                        <output for="minprice" name="minpriceoutput">0</output>
+                        -   
+                        <output for="maxprice" name="maxpriceoutput">30000</output>
+                    </div>    
                 </div>
                 <div>
                     <h3>Производители:</h3>
