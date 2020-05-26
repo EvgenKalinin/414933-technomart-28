@@ -42,7 +42,7 @@
         </nav>
       </header>
       <main>
-        <h1 class="visually-hidden">Перфораторы</h1>
+        <h1>Перфораторы</h1>
         <ul>
             <li><a href="index.html">Главная</a></li>
             <li><a href="catalog.html">Каталог</a></li>
@@ -61,19 +61,15 @@
         </div>
         <section>
             <h2 class="visually-hidden">Фильтр товаров</h2>
-            <form action="https://echo.htmlacademy.ru" method="post" oninput="minpriceoutput.value = minprice.value; maxpriceoutput.value = maxprice.value">
+            <form action="https://echo.htmlacademy.ru" method="post">
                 <div>
                     <span>фильтр:</span>
                     <h3>Цена:</h3>
-                    <label class="visually-hidden" for="minprice">Укажите минимальную цену</label>
-                    <input type="range" id="minprice" name="minprice" min="0" max="100000" value="0" step="1">
-                    <label class="visually-hidden" for="maxprice">Укажите максимальную цену</label>
-                    <input type="range" id="maxprice" name="maxprice" min="0" max="100000" step="1" value="30000" multiple>
-                    <div>  
-                        <output for="minprice" name="minpriceoutput">0</output>
-                        -   
-                        <output for="maxprice" name="maxpriceoutput">30000</output>
-                    </div>    
+                    <label class="visually-hidden" for="price-range">Укажите диапазон цен</label>
+                    <input type="range" id="price-range" name="price-range" min="0" max="50000" value="30000" step="1">
+                    <p>  
+                      <span>0</span> - <span>30000</span>  
+                    </p>    
                 </div>
                 <div>
                     <h3>Производители:</h3>
