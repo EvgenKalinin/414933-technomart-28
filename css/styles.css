@@ -18,6 +18,9 @@
     --succes: #5fbb2d;
     --warning: #ffbf47;
     --error: #ba2732;
+    --logo-bottom: #b32b34;
+    --green-active: #518534;
+    --green-bottom: #363715;
 }
 
 body{
@@ -53,7 +56,11 @@ img {
 .logo{
     display: block;
     background-color: var(--basic-red);
-    border-bottom: 5px solid var(--error);
+    border-bottom: 5px solid var(--logo-bottom);
+}
+
+.logo[href]:active{
+    background-color: var(--error);
 }
 
 .header-top-link,
@@ -68,6 +75,14 @@ img {
 .header-top-link:active{
     background-color: var(--basic-extra-dark-grey);
     color: var(--basic-light-grey)
+}
+
+.product-cart{
+    background-color: var(--basic-red);
+}
+
+.product-cart:active{
+    background-color: var(--error);
 }
 
 .order {
@@ -103,6 +118,10 @@ img {
     border: 3px solid var(--basic-white)
 }
 
+.header-tel:active{
+    color: var(--error);
+}
+
 .header-address{
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 14px;
@@ -117,9 +136,51 @@ img {
 .header-user-navigation a{
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 21px;
-    line-height: 21px;;
+    line-height: 21px;
     color: var(--basic-black);
     background-color: var(--basic-white);
+}
+
+.header-user-navigation a:hover{
+    color: var(--basic-red);
+}
+
+.header-user-navigation a:active{
+    color: var(--basic-light-grey);
+}
+
+.user-profile{
+    background-color: var(--basic-white);
+}
+
+.user-profile a:active{
+    color: var(--basic-light-grey);
+}
+
+.user-profile-name{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 21px;
+    line-height: 21px;
+    color: var(--basic-black);
+}
+
+.nolist{
+    list-style: none;
+}
+
+.user-links a{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-grey);
+}
+
+.user-links a:hover{
+    color: var(--basic-red);
+}
+
+.user-links a:active{
+    color: var(--basic-light-grey);
 }
 
 .header-navigation{
@@ -145,8 +206,118 @@ img {
 }
 
 .header-navigation-current a:not([href]){
-    background-color: var(--basic-grey);
+    background-color: var(--basic-gark-grey);
     color: var(--basic-white);
+}
+
+/* Main */
+
+.page-title{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+    color: var(--basic-black);
+    background-color: var(--basic-background);
+}
+
+/* Breadcrumbs */
+
+.breadcrumbs{
+    list-style: none;
+}
+
+.breadcrumbs a{
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--basic-black)
+}
+
+.breadcrumbs a:hover{
+    border-bottom: 1px solid var(--basic-red);
+
+}
+
+.breadcrumbs a:active{
+    color: var(--basic-light-grey);
+    border-bottom: 1px dotted var(--basic-red);
+}
+
+/* Product list */
+.product-list{
+    list-style: none;
+}
+
+.product-item h3{
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+    color: var(--basic-black);
+}
+
+.product-item-buttons button{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    outline: none;
+    border-radius: 2px;
+}
+
+.add-to-cart{
+    color: var(--basic-white);
+    background-color: var(--basic-green);
+    border: none;
+    border-bottom: 3px solid var(--green-bottom);
+}
+
+.add-to-cart:hover{
+    background-color: var(--succes);
+}
+
+.add-to-cart:active{
+    background-color: var(--green-active);
+}
+
+.add-to-bookmarks{
+    color: var(--basic-grey);
+    background-color: var(--basic-white);
+    border: 3px solid var(--basic-green);
+}
+
+.add-to-bookmarks:hover{
+    color: var(--basic-grey);
+    border-color: var(--basic-grey);
+}
+
+.add-to-bookmarks:active{
+    color: var(--basic-light-grey);
+    border-color: var(--basic-light-grey);
+}
+
+.price{
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: bold;
+}
+
+.old-price{
+    color: var(--basic-light-grey);
+    text-decoration: line-through;
+}
+
+.current-price{
+    color: var(--basic-white);
+    background-color: var(--basic-red);
+}
+
+.new-product{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--basic-white);
+    background-color: var(--basic-red);
 }
 
 /* Index-columns */
@@ -233,15 +404,19 @@ img {
     color: var(--basic-white);
 }
 
-.social-networks a{
+.socials{
+    text-align: center;
+}
+
+.socials a{
     color: var(--basic-white);
 }
 
-.social-networks a:hover{
+.socials a:hover{
     background-color: var(--basic-red);
 }
 
-.social-networks a:active{
+.socials a:active{
     background-color: var(--basic-red);
 }
 
