@@ -218,7 +218,7 @@ img {
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 30px;
     line-height: 30px;
-    color: var(--basic-black);
+    color: var(--basic-grey);
     background-color: var(--basic-background);
     text-transform: uppercase;
 }
@@ -322,13 +322,21 @@ img {
     text-transform: uppercase;
 }
 
-.catalog-filter h3{
+.catalog-filter legend{
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 17px;
     line-height: 30px;
     font-weight: bold;
     text-transform: uppercase;
     color: var(--basic-black)
+}
+
+.filter-option {
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 19px;
+    text-transform: uppercase;
+    list-style: none;
 }
 
 /* Product list */

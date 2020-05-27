@@ -72,32 +72,57 @@
         <section class="catalog-filter">
             <h2 class="visually-hidden">Фильтр товаров</h2>
             <form action="https://echo.htmlacademy.ru" method="post">
-                <div class="price-filter">
+                <fieldset class="price-filter">
                     <span class="section-subtitle filter-subtitle">фильтр:</span>
-                    <h3>Цена:</h3>
+                    <legend>Цена:</legend>
                     <label class="visually-hidden" for="price-range">Укажите диапазон цен</label>
                     <input class="price-filter-range" type="range" id="price-range" name="price-range" min="0" max="50000" value="30000" step="1">
                     <p>  
                       <span class="price-filter-output">0</span> - <span class="price-filter-output">30000</span>  
                     </p>    
-                </div>
-                <div class="manufacturer-filter">
-                    <h3>Производители:</h3>
+                </fieldset>
+                <fieldset class="manufacturer-filter">
+                    <legend>Производители:</legend>
                     
-                        <label><input type="checkbox" name="manufacturer" value="bosch" checked>Bosch</label>
-                        <label><input type="checkbox" name="manufacturer" value="interskol">Интерскол</label>
-                        <label><input type="checkbox" name="manufacturer" value="makita" checked>Makita</label>
-                        <label><input type="checkbox" name="manufacturer" value="dewalt">Dewalt</label>
-                        <label><input type="checkbox" name="manufacturer" value="hitachi">Hitachi</label>
+                        <ul>
+                            <li class="filter-option filter-checkbox">
+                                <input type="checkbox" name="manufacturer" id="filter-item-bosch" value="bosch" checked>
+                                <label for="filter-item-bosch">Bosch</label>
+                            </li>
+                            <li class="filter-option filter-checkbox">
+                                <input type="checkbox" name="manufacturer" id="filter-item-interskol" value="interskol">
+                                <label for="filter-item-interskol">Интерскол</label>
+                            </li>
+                            <li class="filter-option filter-checkbox">
+                                <input type="checkbox" name="manufacturer" id="filter-item-makita" value="makita" checked>
+                                <label for="filter-item-makita">Makita</label>
+                            </li>
+                            <li class="filter-option filter-checkbox">
+                                <input type="checkbox" name="manufacturer" id="filter-item-dewalt" value="dewalt">
+                                <label for="filter-item-dewalt">Dewalt</label>
+                            </li>
+                            <li class="filter-option filter-checkbox">
+                                <input type="checkbox" name="manufacturer" id="filter-item-hitachi" value="hitachi">
+                                <label for="filter-item-hitachi">Hitachi</label>
+                            </li>
+                        </ul>
                     
-                </div>
-                <div class="power-options-filter">
-                    <h3>Питание:</h3>
+                </fieldset>
+                <fieldset class="power-options-filter">
+                    <legend>Питание:</legend>
                     
-                        <label><input type="radio" name="power-options" value="wireless" checked>Аккумуляторные</label>
-                        <label><input type="radio" name="power-options" value="wireline">Сетевые</label>
+                        <ul>
+                            <li class="filter-option filter-radio">
+                                <input type="radio" name="power-options" id="option-filter-wireless" value="wireless" checked>
+                                <label for="option-filter-wireless">Аккумуляторные</label>
+                            </li>
+                            <li class="filter-option filter-radio">
+                                <input type="radio" name="power-options" id="option-filter-wireline" value="wireline">
+                                <label for="option-filter-wireline">Сетевые</label>
+                            </li>
+                        </ul>
                     
-                </div>
+                </fieldset>
                 <button class="page-button page-button-enabled" type="submit">Показать</button>
             </form>
         </section>
