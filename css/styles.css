@@ -195,6 +195,9 @@ img {
 }
 
 .header-navigation a{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
     color: var(--basic-white);
 }
 
@@ -265,12 +268,12 @@ img {
     color: var(--basic-black); 
 }
 
-.breadcrumbs a:hover{
+.breadcrumbs a[href]:hover{
     border-bottom: 1px solid var(--basic-red);
 
 }
 
-.breadcrumbs a:active{
+.breadcrumbs a[href]:active{
     color: var(--basic-light-grey);
     border-bottom: 1px dotted var(--basic-red);
 }
@@ -328,6 +331,13 @@ img {
     line-height: 30px;
     font-weight: bold;
     text-transform: uppercase;
+    color: var(--basic-black)
+}
+
+.price-filter-output{
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 17px;
+    line-height: 18px;
     color: var(--basic-black)
 }
 
@@ -426,6 +436,13 @@ img {
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 30px;
     line-height: 30px;
+    color: var(--basic-black)
+}
+
+.index-columns p{
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
     color: var(--basic-black)
 }
 
