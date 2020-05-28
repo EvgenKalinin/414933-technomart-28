@@ -13,9 +13,21 @@
     --basic-black: #000000;
     --basic-pale-yellow: #99896e;
     --special-yellow: #ffbf47;
+    --special-yellow-hover: #eec16d;
+    --special-yellow-active: #e5b864;
+    --special-extra-light-yellow: #ffd27e;
     --special-blue: #3bbce3;
+    --special-light-blue: #76d0eb;
+    --special-blue-hover: #31a5c9;
+    --special-blue-active: #247f9b;
     --special-lilac: #dc91d8;
+    --special-light-lilac: #e7b2e4;
+    --special-lilac-hover: #be7bbb;
+    --special-lilac-active: #9c649a;
     --special-light-green: #8ed78f;
+    --special-extra-light-green: #b0e3b1;
+    --special-light-green-hover: #73b174;
+    --special-light-green-active: #558656;
     --special-light-yellow: #ffd180;
     --succes: #5fbb2d;
     --warning: #ffbf47;
@@ -226,33 +238,236 @@ img {
     text-transform: uppercase;
 }
 
-.page-button{
+/* Features */
+
+.features-list {
+    list-style: none;
+}
+
+.feature-item h3{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 24px;
+    line-height: 20px;
+    color: var(--basic-white);
+}
+
+.feature-item-button{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--basic-white);
+    text-transform: uppercase;
+}
+
+.feature-item-materials{
+    background-color: var(--special-yellow);
+}
+
+.item-materials-button{
+    background-color: var(--special-extra-light-yellow);
+}
+
+.item-materials-button:hover{
+    background-color: var(--special-yellow-hover);
+}
+
+.item-materials-button:active{
+    background-color: var(--special-yellow-active);
+}
+
+.feature-item-tool{
+    background-color: var(--special-blue);
+}
+
+.item-tool-button{
+    background-color: var(--special-light-blue);
+}
+
+.item-tool-button:hover{
+    background-color: var(--special-blue-hover);
+}
+
+.item-tool-button:active{
+    background-color: var(--special-blue-active);
+}
+
+.feature-item-technic{
+    background-color: var(--special-lilac);
+}
+
+.item-technic-button{
+    background-color: var(--special-light-lilac);
+}
+
+.item-technic-button:hover{
+    background-color: var(--special-lilac-hover);
+}
+
+.item-technic-button:active{
+    background-color: var(--special-lilac-active);
+}
+
+.feature-item-discount{
+    background-color: var(--special-light-green);
+}
+
+.item-discount-button{
+    background-color: var(--special-extra-light-green);
+}
+
+.item-discount-button:hover{
+    background-color: var(--special-light-green-hover);
+}
+
+.item-discount-button:active{
+    background-color: var(--special-light-green-active);
+}
+
+.feature-item-delivery{
+    background-color: var(--special-yellow);
+}
+
+.item-delivery-button{
+    background-color: var(--special-extra-light-yellow);
+}
+
+.item-delivery-button:hover{
+    background-color: var(--special-yellow-hover);
+}
+
+.item-delivery-button:active{
+    background-color: var(--special-yellow-active);
+}
+
+/* Slider */
+
+.slide{
+    background-color: var(--basic-light-grey);
+}
+
+.slide h3{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--basic-white)
+}
+
+.slide p{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--basic-white)
+}
+
+.slide-one {
+    background-image: url("../img/perforatorslide.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.slide-two {
+    background-image: url("../img/drills-slider-img.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+/* Popular products & manufacturers */
+
+.section-title-wrap{
+    background-color: var(--basic-background-cream);
+}
+
+.popular-products h2{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--basic-black); 
+}
+
+.popular-manufacturers h2{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+.popular-manufacturers-list{
+    list-style: none;
+}
+
+/* Services */
+
+.services{
+    background-color: var(--basic-background);
+}
+
+.services h2{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--basic-black); 
+}
+
+.services h3{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--basic-grey);
+}
+
+.services p{
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
-    line-height: 18px;
-    outline: none;
-    border-radius: 2px;
-    border: none;
+    line-height: 24px;
+    color: var(--basic-black); 
 }
 
-.page-button-enabled{
-    color: var(--basic-black);
-    background-color: var(--basic-white);
-    border: 1px solid var(--basic-ultra-light-grey);
+.services-list{
+    list-style: none;
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 21px;
+    line-height: 30px;
+    font-weight: bold;
 }
 
-.page-button-enabled:hover{
-    border-color: var(--basic-light-grey);
-}
-
-.page-button-enabled:active{
-    border-color: var(--basic-red);
-}
-
-.page-button-disabled{
+.service-type{
     color: var(--basic-white);
-    background-color: var(--basic-red);
+    background-color: var(--basic-grey);
 }
+
+.service-type:hover{
+    background-color: var(--basic-gark-grey);
+}
+
+.sevice-type-selected{
+    color: var(--basic-grey);
+    background-color: var(--basic-white);
+}
+
+.delivery-service{
+    background-image: url("../img/delivery-truck.png");
+    background-repeat: no-repeat;
+}
+
+.guarantee-service{
+    background-image: url("../img/guarantee-medal.png");
+    background-repeat: no-repeat;
+}
+
+.credit-service{
+    background-image: url("../img/credit-slip.png");
+    background-repeat: no-repeat;
+}
+
 
 /* Breadcrumbs */
 
@@ -302,7 +517,7 @@ img {
     line-height: 18px;
     color: var(--basic-light-grey);
     text-transform: uppercase;
-    background-color: var(--basic-white);
+    background-color: var(--basic-background-cream);
     border: none;
     border-bottom: 1px dotted var(--basic-red);
     outline: none;
@@ -323,6 +538,17 @@ img {
     line-height: 18px;
     color: var(--basic-red);
     text-transform: uppercase;
+}
+
+.sorting-type-button-selected{
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--basic-red);
+    text-transform: uppercase;
+    background-color: var(--basic-background-cream);
+    border: none;
+    outline: none;
 }
 
 .catalog-filter legend{
@@ -349,6 +575,25 @@ img {
     list-style: none;
 }
 
+.filter-submit-button{
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    background-color: var(--basic-white);
+    outline: none;
+    border: none;
+    border: 1px solid var(--basic-ultra-light-grey);
+}
+
+.filter-submit-button:hover{
+    border: 1px solid var(--basic-light-grey);
+}
+
+.filter-submit-button:active{
+    border: 1px solid var(--basic-red);
+}
+
 /* Product list */
 .product-list{
     list-style: none;
@@ -370,6 +615,7 @@ img {
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 14px;
     line-height: 18px;
+    text-transform: uppercase;
     outline: none;
     border-radius: 2px;
 }
@@ -427,6 +673,38 @@ img {
     font-size: 14px;
     line-height: 18px;
     color: var(--basic-white);
+    text-transform: uppercase;
+    background-color: var(--basic-red);
+}
+
+/* Paginator */
+
+.paginator-button{
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    outline: none;
+    border-radius: 2px;
+    border: none;
+}
+
+.paginator-button-enabled{
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+    border: 1px solid var(--basic-ultra-light-grey);
+}
+
+.paginator-button-enabled:hover{
+    border-color: var(--basic-light-grey);
+}
+
+.paginator-button-enabled:active{
+    border-color: var(--basic-red);
+}
+
+.paginator-button-disabled{
+    color: var(--basic-white);
     background-color: var(--basic-red);
 }
 
@@ -457,12 +735,35 @@ img {
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 14px;
     line-height: 18px;
+    text-transform: uppercase;
     background-color: var(--basic-red);
     color: var(--basic-white);
 }
 
 .regular-button:active{
     background-color: var(--error);
+}
+
+/* Product description */
+
+.product-description{
+    background-color: var(--basic-background);
+}
+
+.product-description h2{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+.product-description p{
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    color: var(--basic-black);
 }
 
 /* Footer */
