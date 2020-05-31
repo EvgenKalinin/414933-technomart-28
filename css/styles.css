@@ -71,7 +71,11 @@ img {
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
-  }
+}
+
+/* .visually-hidden {
+    display: none;
+} */
 
 /* Header */
 
@@ -189,7 +193,7 @@ img {
     padding: 0;
 }
 
-.user-navigation-link{
+.header-user-navigation-link{
     display: block;
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 21px;
@@ -199,27 +203,36 @@ img {
     margin: 0;
 }
 
-.user-navigation-link:hover{
+.header-user-navigation-link:hover{
     color: var(--basic-red);
 }
 
-.user-navigation-link:active{
+.header-user-navigation-link:active{
     color: var(--basic-light-grey);
 }
 
-.user-link-enter{
+.header-user-link-enter{
     margin-right: 63px;
 }
 
-.user-profile{
+.catalog-user-navigation{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 0;
+
+}
+
+.catalog-user-profile{
+    display: flex;
     background-color: var(--basic-white);
 }
 
-.user-profile a:active{
+.catalog-user-profile a:active{
     color: var(--basic-light-grey);
 }
 
-.user-profile-name{
+.catalog-user-profile-name{
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 21px;
     line-height: 21px;
@@ -230,19 +243,28 @@ img {
     list-style: none;
 }
 
-.user-links a{
+.catalog-user-links{
+    display: flex;
+}
+
+.catalog-user-links a{
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 16px;
     line-height: 18px;
     color: var(--basic-grey);
 }
 
-.user-links a:hover{
+.catalog-user-links a:hover{
     color: var(--basic-red);
 }
 
-.user-links a:active{
+.catalog-user-links a:active{
     color: var(--basic-light-grey);
+}
+
+.catalog-user-link-order{
+    margin: 0;
+    margin-right: 30px;
 }
 
 .header-navigation{
@@ -286,14 +308,7 @@ img {
 
 /* Main */
 
-.page-title{
-    font-family: 'Cuprum', Arial, sans-serif;
-    font-size: 30px;
-    line-height: 30px;
-    color: var(--basic-grey);
-    background-color: var(--basic-background);
-    text-transform: uppercase;
-}
+
 
 /* Features */
 
@@ -529,15 +544,25 @@ img {
 /* Breadcrumbs */
 
 .breadcrumbs{
+    display: flex;
     list-style: none;
     text-transform: uppercase;
+    margin: 0;
+    padding: 0;
 }
+
+/* .breadcrumbs li{
+    margin: 0;
+    margin
+} */
 
 .breadcrumbs a{
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
     color: var(--basic-black); 
+    margin: 0;
+    margin-right: 40px;
 }
 
 .breadcrumbs a[href]:hover{
@@ -550,9 +575,51 @@ img {
     border-bottom: 1px dotted var(--basic-red);
 }
 
-/* Catalog filter & sort */
+/* Catalog, filter & sort */
 
-.catalog-sorting,
+.catalog-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-filter,
+.manufacturer-filter,
+.power-options-filter{
+    border: none;
+}
+
+.price-filter{
+    border-bottom: 1px solid var(--basic-light-grey);
+
+}
+
+.manufacturer-filter{
+    border-bottom: 1px solid var(--basic-light-grey);
+}
+
+
+.catalog-title-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.page-title{
+    order: 1;
+    width: 940px;
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+    color: var(--basic-grey);
+    background-color: var(--basic-background);
+    text-transform: uppercase;
+}
+
+.catalog-products{
+    width: 700px;
+}
+
+.catalog-products-sorting,
 .filter-subtitle,
 .price-filter-output,
 .price-filter-range{
@@ -568,7 +635,7 @@ img {
     text-transform: uppercase;
 }
 
-.sorting-type-button{
+.sorting-button{
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
@@ -580,7 +647,7 @@ img {
     outline: none;
 }
 
-.sorting-type-button:hover{
+.sorting-button:hover{
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
@@ -589,7 +656,7 @@ img {
     border-bottom: 1px solid var(--basic-red);
 }
 
-.sorting-type-button:active{
+.sorting-button:active{
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
@@ -597,7 +664,7 @@ img {
     text-transform: uppercase;
 }
 
-.sorting-type-button-selected{
+.sorting-button-selected{
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
@@ -606,6 +673,10 @@ img {
     background-color: var(--basic-background-cream);
     border: none;
     outline: none;
+}
+
+.catalog-filter{
+    width: 220px;
 }
 
 .catalog-filter legend{
@@ -641,6 +712,7 @@ img {
     outline: none;
     border: none;
     border: 1px solid var(--basic-ultra-light-grey);
+    width: 220px;
 }
 
 .filter-submit-button:hover{
@@ -652,12 +724,41 @@ img {
 }
 
 /* Product list */
-.product-list{
+
+.catalog-product-layout{
+    display: grid;
+    grid-template-columns: 220px 220px 220px;
+    row-gap: 20px;
+    column-gap: 18px;
     list-style: none;
+    margin: 0;
+    margin-bottom: 48px;
+    padding: 0;
 }
 
 .product-item{
+    width: 220px;
+    min-height: 318px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 1px solid var(--basic-light-grey);
+    margin: 0;
+    padding: 0;
+}
+
+.product-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.product-img{
+    width: 144px;
+    height: 128;
+    order: -1;
 }
 
 .product-item h3{
@@ -665,7 +766,15 @@ img {
     font-size: 18px;
     line-height: 20px;
     font-weight: bold;
+    text-align: center;
     color: var(--basic-black);
+    margin: 0;
+    max-width: 160px;
+}
+
+.product-item-buttons{
+    display: flex;
+    flex-direction: column;
 }
 
 .product-item-buttons button{
@@ -675,9 +784,11 @@ img {
     text-transform: uppercase;
     outline: none;
     border-radius: 2px;
+    width: 135px;
 }
 
 .add-to-cart{
+    margin-bottom: 10px;
     color: var(--basic-white);
     background-color: var(--basic-green);
     border: none;
@@ -706,6 +817,11 @@ img {
 .add-to-bookmarks:active{
     color: var(--basic-light-grey);
     border-color: var(--basic-light-grey);
+}
+
+.product-item-price{
+    display: flex;
+    flex-direction: column;
 }
 
 .price{
