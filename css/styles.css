@@ -64,6 +64,7 @@ img {
     min-height:100%;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
+    column-gap: 0;
     align-content: start;
 }
 
@@ -309,21 +310,69 @@ img {
 /* Main */
 
 
+/* Promo */
 
-/* Features */
-
-.features-list {
-    list-style: none;
+.promo{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 
+    300px 300px 300px;
+    grid-template-rows: 
+    auto auto auto;
+    margin: 0;
+    margin-bottom: 59px;
 }
 
-.feature-item h3{
+.promo-item-materials{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.promo-item-tool{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.promo-item-technic{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.promo-item-discount{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.promo-item-delivery{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.slider {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.promo-item h3{
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 24px;
     line-height: 20px;
     color: var(--basic-white);
 }
 
-.feature-item-button{
+.promo-item-button{
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 14px;
     line-height: 18px;
@@ -331,7 +380,7 @@ img {
     text-transform: uppercase;
 }
 
-.feature-item-materials{
+.promo-item-materials{
     background-color: var(--special-yellow);
 }
 
@@ -347,7 +396,7 @@ img {
     background-color: var(--special-yellow-active);
 }
 
-.feature-item-tool{
+.promo-item-tool{
     background-color: var(--special-blue);
 }
 
@@ -363,7 +412,7 @@ img {
     background-color: var(--special-blue-active);
 }
 
-.feature-item-technic{
+.promo-item-technic{
     background-color: var(--special-lilac);
 }
 
@@ -379,7 +428,7 @@ img {
     background-color: var(--special-lilac-active);
 }
 
-.feature-item-discount{
+.promo-item-discount{
     background-color: var(--special-light-green);
 }
 
@@ -395,7 +444,7 @@ img {
     background-color: var(--special-light-green-active);
 }
 
-.feature-item-delivery{
+.promo-item-delivery{
     background-color: var(--special-yellow);
 }
 
@@ -447,7 +496,30 @@ img {
 
 /* Popular products & manufacturers */
 
-.section-title-wrap{
+.popular-products{
+    display: grid;
+    grid-template-columns: 940px;
+    grid-template-rows: 89px auto;
+    gap: 20px;
+    margin: 0;
+    margin-bottom: 70px;
+}
+
+.popular-products-list{
+    display: grid;
+    grid-template-columns: 220px 220px 220px 220px;
+    grid-template-rows: auto;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.popular-products-title-wrap{
+    display: flex;
+    justify-content: space-between;
     background-color: var(--basic-background-cream);
 }
 
@@ -457,6 +529,21 @@ img {
     line-height: 30px;
     text-transform: uppercase;
     color: var(--basic-black); 
+}
+
+.popular-manufacturers{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 940px;
+    grid-template-rows: 89px auto;
+    margin: 0;
+    margin-bottom: 70px;
+}
+
+.popular-manufacturers-title-wrap{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--basic-background-cream);
 }
 
 .popular-manufacturers h2{
@@ -469,13 +556,43 @@ img {
 }
 
 .popular-manufacturers-list{
+    display: grid;
+    grid-template-columns: 220px 220px 220px 220px;
+    gap: 20px;
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.popular-manufacturers-list li{
+    min-height: 145px;
+    border: 1px solid var(--basic-light-grey);
 }
 
 /* Services */
 
 .services{
     background-color: var(--basic-background);
+    margin: 0;
+    margin-bottom: 70px;
+}
+
+.services-wrap{
+    display: grid;
+    grid-template-columns: 240px 620px;
+    column-gap: 80px;
+    grid-template-rows: auto;
+}
+
+.servises-desc{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.servises-desc p{
+    width: 400px;
 }
 
 .services h2{
@@ -504,11 +621,17 @@ img {
 }
 
 .services-list{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
     list-style: none;
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 21px;
     line-height: 30px;
     font-weight: bold;
+    margin: 0;
+    padding: 0;
 }
 
 .service-type{
@@ -525,9 +648,20 @@ img {
     background-color: var(--basic-white);
 }
 
+.service{
+    width: 620px;
+    min-height: 180px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
 .delivery-service{
     background-image: url("../img/delivery-truck.png");
     background-repeat: no-repeat;
+}
+
+.delivery-service p{
+    width: 275px;
 }
 
 .guarantee-service{
@@ -535,9 +669,17 @@ img {
     background-repeat: no-repeat;
 }
 
+.guarantee-service p{
+    width: 320px;
+}
+
 .credit-service{
     background-image: url("../img/credit-slip.png");
     background-repeat: no-repeat;
+}
+
+.credit-service p{
+    width: 280px;
 }
 
 
@@ -627,7 +769,16 @@ img {
     border-radius: 2px;
 }
 
+
+.catalog-products-sorting{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 28px;
+}
+
 .section-subtitle{
+    display: block;
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
@@ -689,6 +840,7 @@ img {
 }
 
 .price-filter-output{
+    display: inline-block;
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 17px;
     line-height: 18px;
@@ -852,6 +1004,11 @@ img {
 
 /* Paginator */
 
+.paginator{
+    display: flex;
+    justify-content: left;
+}
+
 .paginator-button{
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
@@ -860,6 +1017,8 @@ img {
     outline: none;
     border-radius: 2px;
     border: none;
+    margin:0;
+    margin-right: 10px;
 }
 
 .paginator-button-enabled{
@@ -978,6 +1137,7 @@ img {
 
 .product-description{
     background-color: var(--basic-background);
+    margin: 0;
 }
 
 .product-description h2{
