@@ -19,8 +19,8 @@
                 </a>
               </div>
               <form class="header-search" action="https://echo.htmlacademy.ru" method="post">
-                <label class="header-search-label" for="search">Поиск:</label>
-                <input class="search-field" type="search" id="search" name="search">
+                <label class="visually-hidden header-search-label" for="search">Поиск:</label>
+                <input class="search-field" type="search" id="search" name="search" placeholder="Поиск:">
                 <button class="visually-hidden" type="submit">Найти</button>
               </form>        
               <a class="header-top-link header-link-bookmarks" href ="blank.html">Закладки: <span>0</span></a>
@@ -294,9 +294,21 @@
             <p class="copyright">© 2010–2017 Компания «Техномарт» Все права защищены</p>
             <section class="socials">
               <ul class="social-links">
-                <li><a class="social-link vk-link" href="https://vk.com">ВКонтакте</a></li>
-                <li><a class="social-link facebook-link" href="https://facebook.com">Фейсбук</a></li>
-                <li><a class="social-link instagram-link" href="https://instagram.com">Инстаграм</a></li>
+                <li>
+                  <a class="social-link vk-link" href="https://vk.com">
+                    <span class="visually-hidden">ВКонтакте</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="social-link facebook-link" href="https://facebook.com">
+                    <span class="visually-hidden">Фейсбук</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="social-link instagram-link" href="https://instagram.com">
+                    <span class="visually-hidden">Инстаграм</span>
+                  </a>
+                </li>
               </ul>
             </section>
             <div class="feedback-developped-wrapper">
@@ -315,10 +327,11 @@
         </div>
       </div>
     </footer>
-    <section>
-      <h2 class="visually-hidden">Большая карта</h2>
-      <img src="img/big-map.jpg" alt="Большая карта">
-      <button type="button"><span>Закрыть карту</span></button>
+    <section class="popup-map">
+      <div class="popup-map-positioner">
+        <h2 class="visually-hidden">Большая карта</h2>
+        <button type="button"><span class="visually-hidden">Закрыть карту</span></button>
+      </div>
     </section>
     <section>
       <h2 class="visually-hidden">Форма отправки сообщения</h2>

@@ -199,6 +199,32 @@ input[type="radio"].visually-hidden {
     opacity: 1;
 }
 
+.header-search .search-field{
+    border: none;
+    background-color: var(--basic-gark-grey);
+}
+
+.search-field::placeholder{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--basic-white);
+}
+
+.search-field::-moz-placeholder{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--basic-white);
+}
+
+.search-field::-webkit-input-placeholder{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--basic-white);
+}
+
 .header-link-bookmarks{
     padding-left: 35px;
     flex-grow: 1;
@@ -1484,8 +1510,22 @@ input[type="radio"].visually-hidden {
     text-align: center;
 }
 
+.social-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 135px;
+}
+
 .social-link{
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
     color: var(--basic-white);
+    background-color: var(--basic-extra-dark-grey);
 }
 
 .social-link:hover{
@@ -1494,6 +1534,24 @@ input[type="radio"].visually-hidden {
 
 .social-link:active{
     background-color: var(--basic-red);
+}
+
+.vk-link{
+    background-image: url(../img/svg/icon-vk.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.facebook-link{
+    background-image: url(../img/svg/icon-fb.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.instagram-link{
+    background-image: url(../img/svg/icon-insta.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .feedback-developped-wrapper{
@@ -1532,4 +1590,33 @@ input[type="radio"].visually-hidden {
 .feedback a:active,
 .developed a:active{
     color: var(--error);
+}
+
+.popup-map{
+    width: 940px;
+    height: 440px;
+    border-top: 7px solid var(--basic-red);
+    background-image: url(../img/big-map.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.popup-map-positioner{
+    position: relative;
+}
+
+.popup-map button{
+    position: absolute;
+    top: 10px;
+    left: 910px;
+    border: none;
+    width: 21px;
+    height: 21px;
+    background-image: url(../img/svg/icon-close.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.popup-map button:hover{
+    cursor: pointer;
 }
