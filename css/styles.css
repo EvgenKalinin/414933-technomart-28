@@ -1250,7 +1250,29 @@ input[type="radio"].visually-hidden {
     margin-bottom: 20px;
 }
 
-filter-input-radio
+.filter-input-radio + label::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -35px;
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/svg/radio-off.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.filter-input-radio:checked + label::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -35px;
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/svg/radio-on.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
 
 .filter-submit-button{
     font-family: 'PT Sans', Arial, sans-serif;
@@ -1262,6 +1284,8 @@ filter-input-radio
     border: none;
     border: 1px solid var(--basic-ultra-light-grey);
     width: 220px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .filter-submit-button:hover{
@@ -1296,6 +1320,11 @@ filter-input-radio
     border: 1px solid var(--basic-light-grey);
     margin: 0;
     padding: 0;
+    padding-top: 40px;
+}
+
+.product-item:hover {
+    box-shadow: 0 0 10px 3px var(--basic-ultra-light-grey);
 }
 
 .product-link{
@@ -1307,12 +1336,15 @@ filter-input-radio
 }
 
 .product-img{
+    outline: 2px solid yellow;
     width: 144px;
-    height: 128;
+    height: 165px;
     margin: 0;
     order: -1;
     object-fit: contain;
 }
+
+img{outline: 1px solid red;}
 
 .product-item h3{
     font-family: 'PT Sans', Arial, sans-serif;
@@ -1326,8 +1358,15 @@ filter-input-radio
 }
 
 .product-item-buttons{
+    position: absolute;
+    top: 35px;
+    left: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 175px;
+    min-height: 136px;
+    background-color: var(--basic-white);
 }
 
 .product-item-buttons button{
@@ -1341,6 +1380,8 @@ filter-input-radio
 }
 
 .add-to-cart{
+    padding-top: 10px;
+    padding-bottom: 8px;
     margin-bottom: 10px;
     color: var(--basic-white);
     background-color: var(--basic-green);
@@ -1357,6 +1398,8 @@ filter-input-radio
 }
 
 .add-to-bookmarks{
+    padding-top: 8px;
+    padding-bottom: 6px;
     color: var(--basic-grey);
     background-color: var(--basic-white);
     border: 3px solid var(--basic-green);
