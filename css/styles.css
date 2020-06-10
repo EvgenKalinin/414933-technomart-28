@@ -989,6 +989,10 @@ input[type="radio"].visually-hidden {
     box-shadow: 0 0 10px 3px var(--basic-ultra-light-grey);
 }
 
+.popular-manufacturers-list li:active{
+    opacity: 0.5;
+}
+
 .popular-manufacturers-list a{
     display: flex;
     justify-content: center;
