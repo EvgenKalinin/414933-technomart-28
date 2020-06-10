@@ -94,6 +94,8 @@ input[type="radio"].visually-hidden {
 .header{
     min-height: 320px;
     background-color: var(--basic-background);
+    margin: 0;
+    margin-bottom: 59px;
 }
 
 .header-top{
@@ -649,18 +651,34 @@ input[type="radio"].visually-hidden {
     font-size: 24px;
     line-height: 20px;
     color: var(--basic-white);
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 22px;
+    margin-bottom: 14px;
 }
 
 .promo-item-button{
+    display: block;
+    width: 135px;
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 14px;
     line-height: 18px;
     color: var(--basic-white);
     text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    margin-left: 22px;
+    margin-bottom: 21px;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .promo-item-materials{
     background-color: var(--special-yellow);
+    background-image: url(../img/svg/paint-can1.svg);
+    background-repeat: no-repeat;
+    background-position: 213px 31px;
 }
 
 .item-materials-button{
@@ -677,6 +695,9 @@ input[type="radio"].visually-hidden {
 
 .promo-item-tool{
     background-color: var(--special-blue);
+    background-image: url(../img/svg/drill-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 194px 34px;
 }
 
 .item-tool-button{
@@ -693,6 +714,9 @@ input[type="radio"].visually-hidden {
 
 .promo-item-technic{
     background-color: var(--special-lilac);
+    background-image: url(../img/svg/tractor-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 191px 31px;
 }
 
 .item-technic-button{
@@ -709,6 +733,9 @@ input[type="radio"].visually-hidden {
 
 .promo-item-discount{
     background-color: var(--special-light-green);
+    background-image: url(../img/svg/cart-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 196px 26px;
 }
 
 .item-discount-button{
@@ -725,6 +752,9 @@ input[type="radio"].visually-hidden {
 
 .promo-item-delivery{
     background-color: var(--special-yellow);
+    background-image: url(../img/svg/car-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 191px 32px;
 }
 
 .item-delivery-button{
@@ -740,9 +770,29 @@ input[type="radio"].visually-hidden {
 }
 
 /* Slider */
+.slider{
+    position: relative;
+}
+
+.slider-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 .slide{
+    display: none;
+    box-sizing: border-box;
+    min-height: 266px;
+    margin: 0;
+    padding: 0;
+    padding-top: 23px;
+    padding-left: 24px;
     background-color: var(--basic-light-grey);
+}
+
+.slide-current{
+    display: block;
 }
 
 .slide h3{
@@ -751,26 +801,98 @@ input[type="radio"].visually-hidden {
     line-height: 36px;
     font-weight: bold;
     text-transform: uppercase;
-    color: var(--basic-white)
+    color: var(--basic-white);
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
 }
 
 .slide p{
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
-    color: var(--basic-white)
+    color: var(--basic-white);
+    margin: 0;
+    margin-bottom: 113px;
+    padding: 0;
+}
+
+.slide a{
+    width: 192px;
 }
 
 .slide-one {
     background-image: url("../img/perforatorslide.jpg");
-    background-position: top center;
+    background-position: 0 0;
     background-repeat: no-repeat;
 }
 
 .slide-two {
     background-image: url("../img/drills-slider-img.jpg");
-    background-position: top center;
+    background-position: 0 0;
     background-repeat: no-repeat;
+}
+
+.slider-controls-middle{
+    display: flex;
+    width: 576px;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 122px;
+    left: 24px;
+    z-index: 20;
+}
+
+.slider-controls-middle button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.slider-controls-middle-button-left{
+    width: 22px;
+    height: 40px;
+    background-image: url(../img/svg/icon-left.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.slider-controls-middle-button-right{
+    width: 22px;
+    height: 40px;
+    background-image: url(../img/svg/icon-right.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+
+.slider-controls-bottom{
+    display: flex;
+    width: 30px;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 220px;
+    left: 295px;
+    z-index: 25;
+}
+
+
+.slider-controls-bottom-button {
+    padding: 0;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 2px solid var(--basic-white);
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+}
+
+.slider-controls-bottom-current{
+    background-color: var(--basic-red);
 }
 
 /* Popular products & manufacturers */
@@ -798,16 +920,26 @@ input[type="radio"].visually-hidden {
 
 .popular-products-title-wrap{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--basic-background-cream);
 }
 
-.popular-products h2{
+.popular-products-title-wrap a{
+    width: 192px;
+    margin-right: 14px;
+}
+
+.popular-products-title-wrap h2{
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
     color: var(--basic-black); 
+    margin: 0;
+    margin-left: 28px;
+    padding: 0;
 }
 
 .popular-manufacturers{
@@ -821,17 +953,27 @@ input[type="radio"].visually-hidden {
 
 .popular-manufacturers-title-wrap{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--basic-background-cream);
 }
 
-.popular-manufacturers h2{
+.popular-manufacturers-title-wrap h2{
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 30px;
     line-height: 30px;
     font-weight: normal;
     text-transform: uppercase;
     color: var(--basic-black);
+    margin: 0;
+    margin-left: 28px;
+    padding: 0;
+}
+
+.popular-manufacturers-title-wrap a {
+    width: 192px;
+    margin-right: 14px;
 }
 
 .popular-manufacturers-list{
@@ -843,10 +985,23 @@ input[type="radio"].visually-hidden {
     padding: 0;
 }
 
-.popular-manufacturers-list li{
-    min-height: 145px;
+.popular-manufacturers-list li:hover{
+    box-shadow: 0 0 10px 3px var(--basic-ultra-light-grey);
+}
+
+.popular-manufacturers-list a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 145px;
+    object-fit: contain;
+    background-color: var(--basic-white);
+    margin: 0;
+    padding: 0;
     border: 1px solid var(--basic-light-grey);
 }
+
 
 /* Services */
 
@@ -1386,7 +1541,7 @@ input[type="radio"].visually-hidden {
     object-fit: contain;
     background-color: var(--basic-white);
     text-align: center;
-    vertical-align: top;
+    
 }
 
 
