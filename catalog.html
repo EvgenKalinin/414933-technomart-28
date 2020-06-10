@@ -194,8 +194,8 @@
                                 <button class="add-to-bookmarks" type="submit">В закладки</button>
                             </div>
                             <p class="product-item-price">
-                                <span class="old-price price">30500Р.</span>
-                                <div class="current-price-wrap"><span class="current-price price">25500</span></div>
+                                <span class="old-price price">30500 Р.</span>
+                                <div class="current-price-wrap"><span class="current-price price">25500 Р.</span></div>
                             </p>
                         </li>
                         <li class="product-item">
@@ -211,8 +211,8 @@
                                 <button class="add-to-bookmarks" type="submit">В закладки</button>
                             </div>
                             <p class="product-item-price">
-                                <span class="old-price price">30500Р.</span>
-                                <div class="current-price-wrap"><span class="current-price price">25500</span></div>
+                                <span class="old-price price">30500 Р.</span>
+                                <div class="current-price-wrap"><span class="current-price price">25500 Р.</span></div>
                             </p>
                         </li>
                         <li class="product-item">
@@ -223,13 +223,13 @@
                                 </p>
                             </a>
                             <span class="new-product">new</span>
-                            <div class="product-item-buttons visually-hidden">
-                                <button class="add-to-cart" type="submit">Купить</button>
+                            <div class="product-item-buttons">
+                                <button class="add-to-cart" type="submit"><span class="add-to-cart-styler">Купить</span></button>
                                 <button class="add-to-bookmarks" type="submit">В закладки</button>
                             </div>
                             <p class="product-item-price">
-                                <span class="old-price price">30500Р.</span>
-                                <div class="current-price-wrap"><span class="current-price price">25500</span></div>
+                                <span class="old-price price">30500 Р.</span>
+                                <div class="current-price-wrap"><span class="current-price price">25500 Р.</span></div>
                             </p>
                         </li>
                         <li class="product-item">
@@ -264,8 +264,8 @@
                                 <button class="add-to-bookmarks" type="submit">В закладки</button>
                             </div>
                             <p class="product-item-price">
-                                <span class="old-price price">30500Р.</span>
-                                <div class="current-price-wrap"><span class="current-price price">25500</span></div>
+                                <span class="old-price price">30500 Р.</span>
+                                <div class="current-price-wrap"><span class="current-price price">25500 Р.</span></div>
                             </p>
                         </li>
                         <li class="product-item">
@@ -280,8 +280,9 @@
                                 <button class="add-to-cart" type="submit">Купить</button>
                                 <button class="add-to-bookmarks" type="submit">В закладки</button>
                             </div>
-                            <p>
-                                <div class="current-price-wrap"><span class="current-price price">12500</span></div>
+                            <p class="product-item-price">
+                                <span class="old-price price"></span> 
+                                <div class="current-price-wrap"><span class="current-price price">12500 Р.</span></div>
                             </p>
                         </li>
                         <li class="product-item">
@@ -297,8 +298,8 @@
                                 <button class="add-to-bookmarks" type="submit">В закладки</button>
                             </div>
                             <p class="product-item-price">
-                                <span class="old-price price">22500Р.</span>
-                                <div class="current-price-wrap"><span class="current-price price">15500</span></div>
+                                <span class="old-price price">22500 Р.</span>
+                                <div class="current-price-wrap"><span class="current-price price">15500 Р.</span></div>
                             </p>
                         </li>
                         <li class="product-item">
@@ -314,8 +315,8 @@
                                 <button class="add-to-bookmarks" type="submit">В закладки</button>
                             </div>
                             <p class="product-item-price">
-                                <span class="old-price price">30500Р.</span>
-                                <div class="current-price-wrap"><span class="current-price price">25500</span></div>
+                                <span class="old-price price">30500 Р.</span>
+                                <div class="current-price-wrap"><span class="current-price price">25500 Р.</span></div>
                             </p>
                         </li>
                         <li class="product-item">
@@ -331,7 +332,8 @@
                                 <button class="add-to-bookmarks" type="submit">В закладки</button>
                             </div>
                             <p class="product-item-price">
-                                <div class="current-price-wrap"><span class="current-price price">12500</span></div>
+                                <span class="old-price price"></span>
+                                <div class="current-price-wrap"><span class="current-price price">12500 Р.</span></div>
                             </p>
                         </li>
                     </ul>
@@ -357,7 +359,7 @@
     <footer class="footer">
         <div class="container">
           <div class="footer-top">
-            <a class="footer-logo">
+            <a class="footer-logo" href="index.html">
               <img src="img/svg/logo-technomart.svg" width="138" height="23" alt="Логотип Техномарт">
             </a>
             <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</p>
@@ -415,11 +417,13 @@
         </div>
       </div>
     </footer>
-    <section>
+    <section class="popup-added-to-cart">
         <p><strong>Товар добавлен в корзину!</strong></p>
-        <a href="blank.html">Оформить заказ</a>
-        <a href="blank.html">Продолжить покупки</a>
-        <button type="button"><span>Закрыть окно</span></button>
+        <div class="popup-added-to-cart-buttons-wrap">
+            <a class="popup-added-to-cart-place-order-button" href="blank.html">Оформить заказ</a>
+            <a class="popup-added-to-cart-continue-shopping-button" href="blank.html">Продолжить покупки</a>
+        </div>
+        <button class="popup-added-to-cart-close-button" type="button"><span class="visually-hidden">Закрыть окно</span></button>
     </section>
   </body>
 </html>  
