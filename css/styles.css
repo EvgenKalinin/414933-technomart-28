@@ -1058,7 +1058,7 @@ input[type="radio"].visually-hidden {
     color: var(--basic-black); 
 }
 
-.services-list{
+.services-type-list{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -1070,6 +1070,7 @@ input[type="radio"].visually-hidden {
     font-weight: bold;
     margin: 0;
     padding: 0;
+    
 }
 
 .service-type{
@@ -1087,15 +1088,29 @@ input[type="radio"].visually-hidden {
 }
 
 .service{
-    width: 620px;
-    min-height: 180px;
+    outline: 1px solid yellow;
+    position: relative;
+    min-height: 285px;
     grid-column-start: 2;
     grid-column-end: 3;
+    list-style: none;
 }
 
 .delivery-service{
+    display: none;
+}
+
+.delivery-service::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 40px;
+
+    width: 468px;
+    height: 261px;
     background-image: url("../img/delivery-truck.png");
     background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .delivery-service p{
@@ -1103,9 +1118,23 @@ input[type="radio"].visually-hidden {
 }
 
 .guarantee-service{
+    display: none;
+}
+
+.guarantee-service::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+
+    width: 389px;
+    height: 283px;
     background-image: url("../img/guarantee-medal.png");
     background-repeat: no-repeat;
+    background-position: 0 0;
 }
+
+
 
 .guarantee-service p{
     width: 320px;
