@@ -225,11 +225,11 @@
               </p>
             </div>
             <ul class="services-type-list">
-              <li class="sevice-type-selected">Доставка</li>
-              <li class="service-type">Гарантия</li>
-              <li class="service-type">Кредит</li>
+              <li class="sevice-type-selected"><button type="button" area-label="Показать описание сервиса доставки">Доставка</button></li>
+              <li class="service-type"><button type="button" area-label="показать описание сервиса гарантии">Гарантия</button></li>
+              <li class="service-type"><button type="button" area-label="показать описание сервиса кредита">Кредит</button></li>
             </ul>
-            <ul>
+            <ul class="services-items-list">
               <li class="delivery-service service">
                 <h3>Доставка</h3>
                 <p>
@@ -347,18 +347,34 @@
         <button class="popup-map-close-button" type="button"><span class="visually-hidden">Закрыть карту</span></button>
       </div>
     </section>
-    <section>
-      <h2 class="visually-hidden">Форма отправки сообщения</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <label for="name">Ваше имя:</label><br>
-        <input type="text" id="name" name="name" placeholder="Имя Фамилия" required><br>
-        <label for="email">Ваш e-mail:</label><br>
-        <input type="email" id="email" name="email" placeholder="email@example.com" required><br>
-        <label for="message">Текст письма:</label><br>
-        <input type="textarea" id="message" name="message" placeholder="В свободной форме" required><br>
-        <button type="submit">Отправить</button>
-      </form>
-      <button type="button"><span>Закрыть форму</span></button>
+    <section class="feedback-form-popup">
+      <div class="feedback-form-wrap">
+        <h2 class="visually-hidden">Форма отправки сообщения</h2>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="feedback-form-positioner">
+            <div class="feedback-form-layout">
+              <div class="feedback-form-name-field">
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" name="name" placeholder="Имя Фамилия" required>
+              </div>
+              <div class="feedback-form-email-field">
+                <label for="email">Ваш e-mail:</label>
+                <input type="email" id="email" name="email" placeholder="email@example.com" required>
+              </div>
+              <div class="feedback-form-message-field">
+                <label for="message">Текст письма:</label>
+                <textarea rows="4" id="message" name="message" placeholder="В свободной форме" required></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="feedback-form-bottom">
+            <button class="regular-button" type="submit">Отправить</button>
+          </div>
+        </form>
+        <button class="feedback-form-close-button" type="button">
+          <span class="visually-hidden">Закрыть форму</span>
+        </button>
+      </div>
     </section>
   </body>
 </html>
