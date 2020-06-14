@@ -94,8 +94,6 @@ input[type="radio"].visually-hidden {
 .header{
     min-height: 320px;
     background-color: var(--basic-background);
-    margin: 0;
-    margin-bottom: 59px;
 }
 
 .header-top{
@@ -598,6 +596,8 @@ input[type="radio"].visually-hidden {
     300px 300px 300px;
     grid-template-rows: 
     auto auto auto;
+    padding: 0;
+    padding-top: 59px;
     margin: 0;
     margin-bottom: 59px;
 }
@@ -1216,8 +1216,7 @@ input[type="radio"].visually-hidden {
     list-style: none;
     text-transform: uppercase;
     margin: 0;
-    padding: 0;
-    padding-top: 15px;
+    padding: 17px 0;
 }
 
 .breadcrumbs a{
@@ -1328,15 +1327,23 @@ input[type="radio"].visually-hidden {
     border: none;
 }
 
-
-
+.filter-subtitle{
+    padding-top: 8px;
+    padding-bottom: 9px;
+    padding-left: 18px;
+    margin-bottom: 15px;
+}
 
 .price-filter{
-    margin: 0;
-    margin-bottom: 15px;
     padding: 0;
+    margin-bottom: 15px;
     border-bottom: 1px solid var(--basic-light-grey);
 
+}
+
+.price-filter legend{
+    margin: 0;
+    margin-bottom: 20px;
 }
 
 .manufacturer-filter{
@@ -1383,9 +1390,10 @@ input[type="radio"].visually-hidden {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
+    margin-bottom: 20px;
 }
 
-.page-title{
+.catalog-page-title{
     order: 1;
     width: 940px;
     font-family: 'Cuprum', Arial, sans-serif;
@@ -1394,6 +1402,8 @@ input[type="radio"].visually-hidden {
     color: var(--basic-grey);
     background-color: var(--basic-background);
     text-transform: uppercase;
+    margin: 0;
+    padding: 30px;
 }
 
 .catalog-products{
@@ -1412,8 +1422,10 @@ input[type="radio"].visually-hidden {
 .catalog-products-sorting{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0;
     margin-bottom: 28px;
+    padding: 8px 20px;
 }
 
 .section-subtitle{
@@ -1423,6 +1435,29 @@ input[type="radio"].visually-hidden {
     line-height: 18px;
     color: var(--basic-black);
     text-transform: uppercase;
+}
+
+.sorting-buttons{
+    display: flex;
+    justify-content: space-between;
+    min-width: 440px;
+}
+
+.sorting-buttons-layout{
+    display: flex;
+    justify-content: space-between;
+    min-width: 355px;
+}
+
+.sorting-button-icon-layout{
+    display: flex;
+    justify-content: space-between;
+    min-width: 40px;
+}
+
+.sorting-buttons button{
+    margin: 0;
+    padding: 0;
 }
 
 .sorting-button{
@@ -1463,6 +1498,30 @@ input[type="radio"].visually-hidden {
     background-color: var(--basic-background-cream);
     border: none;
     outline: none;
+}
+
+.sorting-button-icon{
+    border: none;
+    outline: none;
+    background-color: inherit;
+} 
+
+.sorting-button-icon path{
+    fill: var(--basic-light-grey);
+}
+
+.sorting-button-icon:hover path{
+    fill: var(--basic-black);
+}
+
+.sorting-button-icon-selected{
+    border: none;
+    outline: none;
+    background-color: inherit;
+} 
+
+.sorting-button-icon-selected path{
+    fill: var(--basic-red);
 }
 
 .catalog-filter{

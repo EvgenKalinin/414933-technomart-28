@@ -87,7 +87,7 @@
     <main>
         <div class="container">
             <div class="catalog-title-section">
-                <h1 class="page-title">Перфораторы</h1>
+                <h1 class="catalog-page-title">Перфораторы</h1>
                 <ul class="breadcrumbs">
                     <li class="breadcrumbs-main">
                         <a class="breadcrumbs-main-link" href="index.html"><span class="visually-hidden">Главная</span></a>
@@ -111,13 +111,10 @@
                     <span class="section-subtitle filter-subtitle">фильтр:</span>
                     <form action="https://echo.htmlacademy.ru" method="post">
                         <fieldset class="price-filter">
-                            
                             <legend>Цена:</legend>
-                            <label class="visually-hidden" for="price-range">Укажите диапазон цен</label>
-                            <input class="price-filter-range" type="range" id="price-range" name="price-range" min="0" max="50000" value="30000" step="1">
-                            <div>  
-                              <span class="price-filter-output">0</span> - <span class="price-filter-output">30000</span>  
-                            </div>    
+                            <div class="price-filter-range">
+                                
+                            </div>   
                         </fieldset>
                         <fieldset class="manufacturer-filter">
                             <legend>Производители:</legend>
@@ -172,11 +169,24 @@
                     <div class="catalog-products-sorting">
                         <span class="section-subtitle">Сортировка:</span>
                         <div class="sorting-buttons">
-                            <button class="sorting-button-selected" type="submit">По цене</button>
-                            <button class="sorting-button" type="submit">По типу</button>
-                            <button class="sorting-button" type="submit">По функционалу</button>
-                            <button class="sorting-button-selected" type="submit">По возрастанию</button>
-                            <button class="sorting-button" type="submit">По убыванию</button>
+                            <div class="sorting-buttons-layout">
+                                <button class="sorting-button-selected" type="submit">По цене</button>
+                                <button class="sorting-button" type="submit">По типу</button>
+                                <button class="sorting-button" type="submit">По функционалу</button>
+                            </div>
+                            <div class="sorting-button-icon-layout">
+                                <button class="sorting-button-icon-selected" type="submit">
+                                    <span class="visually-hidden">По возрастанию</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                                        <path fill="#231F20" d="M5.5 0L0 10h11z"/>
+                                    </svg>
+                                </button>
+                                <button class="sorting-button-icon" type="submit">
+                                    <span class="visually-hidden">По убыванию</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                                        <path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
                     
