@@ -652,9 +652,9 @@ input[type="radio"].visually-hidden {
     line-height: 20px;
     color: var(--basic-white);
     margin: 0;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-left: 22px;
-    margin-bottom: 14px;
+    margin-bottom: 18px;
 }
 
 .promo-item-button{
@@ -933,6 +933,7 @@ input[type="radio"].visually-hidden {
 
 .popular-products-title-wrap h2{
     font-family: 'Cuprum', Arial, sans-serif;
+    font-weight: normal;
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
@@ -973,7 +974,7 @@ input[type="radio"].visually-hidden {
 
 .popular-manufacturers-title-wrap a {
     width: 192px;
-    margin-right: 14px;
+    margin-right: 20px;
 }
 
 .popular-manufacturers-list{
@@ -983,6 +984,15 @@ input[type="radio"].visually-hidden {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.popular-manufacturers-list li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 145px;
+    border: 1px solid var(--basic-light-grey);
+    box-sizing: border-box;
 }
 
 .popular-manufacturers-list li:hover{
@@ -998,12 +1008,11 @@ input[type="radio"].visually-hidden {
     justify-content: center;
     align-items: center;
     width: 220px;
-    height: 145px;
+    height: 100px;
     object-fit: contain;
     background-color: var(--basic-white);
     margin: 0;
     padding: 0;
-    border: 1px solid var(--basic-light-grey);
 }
 
 
@@ -1041,6 +1050,9 @@ input[type="radio"].visually-hidden {
     font-weight: normal;
     text-transform: uppercase;
     color: var(--basic-black); 
+    margin: 0;
+    margin-top: 65px;
+    padding: 0;
 }
 
 .services h3{
@@ -1061,6 +1073,7 @@ input[type="radio"].visually-hidden {
     line-height: 24px;
     color: var(--basic-black); 
     margin: 0;
+    margin-top: 25px;
     padding: 0;
 }
 
@@ -1071,10 +1084,6 @@ input[type="radio"].visually-hidden {
     grid-row-end: 3;
     position: relative;
     list-style: none;
-    font-family: 'Cuprum', Arial, sans-serif;
-    font-size: 21px;
-    line-height: 30px;
-    font-weight: bold;
     margin: 0;
     padding: 0;   
 }
@@ -1095,14 +1104,18 @@ input[type="radio"].visually-hidden {
     width: 100%;
     border: none;
     /* outline: none; */
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 21px;
+    line-height: 30px;
+    font-weight: bold;
     text-align: left;
     color: inherit;
     background-color: transparent;
     margin: 0;
     padding: 0;
     padding-left: 22px;
-    padding-top: 14px;
-    padding-bottom: 18px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     cursor: pointer;
 }
 
@@ -1142,8 +1155,8 @@ input[type="radio"].visually-hidden {
 .delivery-service::after{
     content: "";
     position: absolute;
-    bottom: 0;
-    right: 40px;
+    top: 20px;
+    right: 0;
 
     width: 468px;
     height: 261px;
@@ -1163,7 +1176,7 @@ input[type="radio"].visually-hidden {
 .guarantee-service::after{
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     right: -10px;
 
     width: 389px;
@@ -1173,7 +1186,18 @@ input[type="radio"].visually-hidden {
     background-position: 0 0;
 }
 
-
+.guarantee-service h3{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 36px;
+    line-height: 24px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--basic-grey);
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    padding: 0;
+}
 
 .guarantee-service p{
     width: 320px;
@@ -1194,6 +1218,18 @@ input[type="radio"].visually-hidden {
     background-image: url("../img/credit-slip.png");
     background-repeat: no-repeat;
     background-position: 0 0;
+}
+
+.credit-service h3{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 36px;
+    line-height: 24px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--basic-grey);
+    margin: 0;
+    margin-bottom: 35px;
+    padding: 0;
 }
 
 .credit-service p{
@@ -1476,6 +1512,7 @@ input[type="radio"].visually-hidden {
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 30px;
     line-height: 30px;
+    font-weight: normal;
     color: var(--basic-grey);
     background-color: var(--basic-background);
     text-transform: uppercase;
@@ -1929,8 +1966,8 @@ input[type="radio"].visually-hidden {
     transform: rotate(45deg);
     
     position: absolute;
-    top:5px;
-    left: 230px;
+    top:8px;
+    left: 225px;
     width: 100px;
     padding: 0;
     padding-top: 5px;
