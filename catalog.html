@@ -113,7 +113,24 @@
                         <fieldset class="price-filter">
                             <legend>Цена:</legend>
                             <div class="price-filter-range">
-                                
+                                <div class="price-filter-controls">
+                                    <div class="price-filter-scale">
+                                        <div class="price-filter-bar"></div>
+                                    </div>
+                                    <div class="price-filter-toggle price-filter-toggle-min" tabindex="0"></div>    
+                                    <div class="price-filter-toggle price-filter-toggle-max" tabindex="0"></div>  
+                                </div>
+                                <div class="price-filter-outputs">
+                                    <label class="min-price">
+                                    <span class="visually-hidden">Цена от</span>
+                                    <input type="number" name="min-price" value="0">
+                                    </label>
+                                    _
+                                    <label class="max-price">
+                                    <span class="visually-hidden">Цена до</span>
+                                    <input type="number" name="max-price" value="30000">
+                                    </label>
+                                </div>     
                             </div>   
                         </fieldset>
                         <fieldset class="manufacturer-filter">
@@ -200,7 +217,7 @@
                             </a>
                             <span class="new-product visually-hidden">new</span>
                             <div class="product-item-buttons visually-hidden">
-                                <button class="add-to-cart" type="submit">Купить</button>
+                                <button class="add-to-cart" type="submit"><span class="add-to-cart-styler">Купить</span></button>
                                 <button class="add-to-bookmarks" type="submit">В закладки</button>
                             </div>
                             <p class="product-item-price">
@@ -217,7 +234,7 @@
                             </a>
                             <span class="new-product visually-hidden">new</span>
                             <div class="product-item-buttons visually-hidden">
-                                <button class="add-to-cart" type="submit">Купить</button>
+                                <button class="add-to-cart" type="submit"><span class="add-to-cart-styler">Купить</span></button>
                                 <button class="add-to-bookmarks" type="submit">В закладки</button>
                             </div>
                             <p class="product-item-price">
@@ -251,7 +268,7 @@
                             </a>
                             <span class="new-product">new</span>
                             <div class="product-item-buttons visually-hidden">
-                                <button class="add-to-cart" type="submit">Купить</button>
+                                <button class="add-to-cart" type="submit"><span class="add-to-cart-styler">Купить</span></button>
                                 <button class="add-to-bookmarks" type="submit">В закладки</button>
                             </div>
                             <p class="product-item-price">
@@ -270,7 +287,7 @@
                             </a>
                             <span class="new-product visually-hidden">new</span>
                             <div class="product-item-buttons visually-hidden">
-                                <button class="add-to-cart" type="submit">Купить</button>
+                                <button class="add-to-cart" type="submit"><span class="add-to-cart-styler">Купить</span></button>
                                 <button class="add-to-bookmarks" type="submit">В закладки</button>
                             </div>
                             <p class="product-item-price">
@@ -287,7 +304,7 @@
                             </a>
                             <span class="new-product">new</span>
                             <div class="product-item-buttons visually-hidden">
-                                <button class="add-to-cart" type="submit">Купить</button>
+                                <button class="add-to-cart" type="submit"><span class="add-to-cart-styler">Купить</span></button>
                                 <button class="add-to-bookmarks" type="submit">В закладки</button>
                             </div>
                             <p class="product-item-price">
@@ -304,7 +321,7 @@
                             </a>
                             <span class="new-product">new</span>
                             <div class="product-item-buttons visually-hidden">
-                                <button class="add-to-cart" type="submit">Купить</button>
+                                <button class="add-to-cart" type="submit"><span class="add-to-cart-styler">Купить</span></button>
                                 <button class="add-to-bookmarks" type="submit">В закладки</button>
                             </div>
                             <p class="product-item-price">
@@ -321,7 +338,7 @@
                             </a>
                             <span class="new-product visually-hidden">new</span>
                             <div class="product-item-buttons visually-hidden">
-                                <button class="add-to-cart" type="submit">Купить</button>
+                                <button class="add-to-cart" type="submit"><span class="add-to-cart-styler">Купить</span></button>
                                 <button class="add-to-bookmarks" type="submit">В закладки</button>
                             </div>
                             <p class="product-item-price">
@@ -338,7 +355,7 @@
                             </a>
                             <span class="new-product">new</span>
                             <div class="product-item-buttons visually-hidden">
-                                <button class="add-to-cart" type="submit">Купить</button>
+                                <button class="add-to-cart" type="submit"><span class="add-to-cart-styler">Купить</span></button>
                                 <button class="add-to-bookmarks" type="submit">В закладки</button>
                             </div>
                             <p class="product-item-price">
@@ -349,20 +366,22 @@
                     </ul>
                     
                     <div class="paginator">
-                        <button class="paginator-button paginator-button-disabled">1</button>
-                        <button class="paginator-button paginator-button-enabled" href="#">2</button>
-                        <button class="paginator-button paginator-button-enabled" href="#">3</button>
-                        <button class="paginator-button paginator-button-enabled" href="#">Следующая</button>
+                        <button class="paginator-button paginator-button-disabled" aria-label="Первая страница каталога">1</button>
+                        <button class="paginator-button paginator-button-enabled" href="#" aria-label="Вторая страница каталога">2</button>
+                        <button class="paginator-button paginator-button-enabled" href="#" aria-label="Третья страница каталога">3</button>
+                        <button class="paginator-button paginator-button-next-page paginator-button-enabled" href="#" aria-label="Следующая страница каталога">Следующая</button>
                     </div>
                 </section>
             </div>
         </div>
         <section class="product-description">
             <div class="container">
-                <h2>Пара слов о перфораторах</h2>
-                <p>
-                    Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
-                </p>
+                <div class="product-description-wrapper">
+                    <h2>Пара слов о перфораторах</h2>
+                    <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.</p> 
+                    <p>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.</p> 
+                    <p>В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+                </div>
             </div>
         </section>
     </main>
