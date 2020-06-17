@@ -212,7 +212,7 @@ input[type="radio"].visually-hidden {
     color: var(--basic-white);
 }
 
-/* .search-field::-moz-placeholder{
+.search-field::-moz-placeholder{
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
@@ -224,7 +224,7 @@ input[type="radio"].visually-hidden {
     font-size: 18px;
     line-height: 24px;
     color: var(--basic-white);
-} */
+}
 
 .search-field:focus{
     background-color: var(--basic-white);
@@ -238,6 +238,10 @@ input[type="radio"].visually-hidden {
 
 .search-field:focus ~ .header-search-label path{
     fill: var(--basic-red);
+}
+
+.header-search button{
+    display: none;
 }
 
 .header-link-bookmarks{
@@ -860,7 +864,6 @@ input[type="radio"].visually-hidden {
 
 .slider-controls-middle button{
     border: none;
-    outline: none;
     background-color: transparent;
     cursor: pointer;
 }
@@ -902,7 +905,6 @@ input[type="radio"].visually-hidden {
     border: 2px solid var(--basic-white);
     border-radius: 50%;
     cursor: pointer;
-    outline: none;
 }
 
 .slider-controls-bottom-current{
@@ -1234,6 +1236,7 @@ input[type="radio"].visually-hidden {
 }
 
 .breadcrumbs a{
+    display: block;
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
@@ -1259,6 +1262,8 @@ input[type="radio"].visually-hidden {
 
 .breadcrumbs-main-link{
     padding-left: 15px;
+    width: 14px;
+    height: 100%;
 }
 
 
@@ -1758,7 +1763,7 @@ input[type="radio"].visually-hidden {
     box-shadow: 0 0 10px 3px var(--basic-ultra-light-grey);
 }
 
-.product-link{
+.product-item-top{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1795,13 +1800,25 @@ input[type="radio"].visually-hidden {
 }
 
 .product-item-buttons{
+    display: none;
     position: absolute;
     top: 38px;
-    left: 30px;
+    left: 10px;
+}
+
+.product-item:hover .product-item-buttons{
+    display: block;
+}
+
+.product-item:focus .product-item-buttons{
+    display: block;
+}
+
+.product-item-buttons-wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 155px;
+    width: 195px;
     min-height: 136px;
     background-color: var(--basic-white);
 }
@@ -1936,6 +1953,7 @@ input[type="radio"].visually-hidden {
     text-transform: uppercase;
     text-align: center;
     background-color: var(--basic-red);
+    z-index: 10;
 }
 
 .new-promo-product{
@@ -2372,6 +2390,7 @@ input[type="radio"].visually-hidden {
 /* Popups */
 
 .popup-map{
+    display: none;
     width: 940px;
     height: 440px;
     border-top: 7px solid var(--basic-red);
@@ -2513,6 +2532,7 @@ input[type="radio"].visually-hidden {
 }
 
 .feedback-form-popup{
+    display: none;
     width: 620px;
     border-top: 7px solid var(--basic-red);
     box-shadow: 0px 4px 20px 0px var(--basic-ultra-light-grey);
@@ -2640,28 +2660,26 @@ input[type="radio"].visually-hidden {
 .feedback-form button{
     width: 460px;
     border: none;
-    outline: none;
     cursor: pointer;
 }
 
 .feedback-form-close-button{
-    outline: none;
-    border: none;
-    background-color: inherit;
-}
-
-.feedback-form-close-button::after{
-    content: "";
     position: absolute;
     top: 11px;
     right: 11px;
 
     width: 21px;
     height: 21px;
+
+    background-color: inherit;
     background-image: url(../img/svg/icon-close.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
 
     cursor: pointer;
+    border: none;
+    
 }
+
+/* Вот и все ребята! */
 
