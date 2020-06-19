@@ -1564,13 +1564,15 @@ input[type="radio"].visually-hidden {
     border-bottom: 1px dotted var(--basic-red);
 }
 
-.sorting-button:hover{
+.sorting-button:hover,
+.sorting-button:focus{
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
     color: var(--basic-black);
     text-transform: uppercase;
     border-bottom: 1px solid var(--basic-red);
+    outline: none;
 }
 
 .sorting-button:active{
@@ -1591,16 +1593,27 @@ input[type="radio"].visually-hidden {
     border: none;
 }
 
+.sorting-button-selected:focus{
+    outline:none;
+    padding-bottom: 1px;
+}
+
 .sorting-button-icon{
     border: none;
     background-color: inherit;
 } 
 
+.sorting-button-icon:focus{
+    outline: none;
+    border: none;
+}
+
 .sorting-button-icon path{
     fill: var(--basic-light-grey);
 }
 
-.sorting-button-icon:hover path{
+.sorting-button-icon:hover path,
+.sorting-button-icon:focus path{
     fill: var(--basic-black);
 }
 
@@ -1608,6 +1621,11 @@ input[type="radio"].visually-hidden {
     border: none;
     background-color: inherit;
 } 
+
+.sorting-button-icon-selected:focus{
+    outline: none;
+    padding-bottom: 1px;
+}
 
 .sorting-button-icon-selected path{
     fill: var(--basic-red);
@@ -1636,9 +1654,6 @@ input[type="radio"].visually-hidden {
     list-style: none;   
 }
 
-.filter-option label:focus{
-    outline: 1px solid var(--basic-black);
-}
 
 .filter-option label{
     position: relative;
@@ -1676,6 +1691,34 @@ input[type="radio"].visually-hidden {
     background-position: 0 0;
 }
 
+.filter-input-checkbox:hover + label::before,
+.filter-input-checkbox:focus + label::before{
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: -2px;
+    width: 23px;
+    height: 23px;
+    background-image: url(../img/svg/checkbox-off-dark.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.filter-input-checkbox:checked:hover + label::after,
+.filter-input-checkbox:checked:focus + label::after{
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: -2px;
+    width: 27px;
+    height: 23px;
+    background-image: url(../img/svg/checkbox-on-dark.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+
+
 .filter-radio{
     margin: 0;
     margin-bottom: 22px;
@@ -1693,6 +1736,19 @@ input[type="radio"].visually-hidden {
     background-position: 0 0;
 }
 
+.filter-input-radio:hover + label::before,
+.filter-input-radio:focus + label::before{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -35px;
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/svg/radio-off-dark.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
 .filter-input-radio:checked + label::after{
     content: "";
     position: absolute;
@@ -1701,6 +1757,19 @@ input[type="radio"].visually-hidden {
     width: 25px;
     height: 25px;
     background-image: url(../img/svg/radio-on.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.filter-input-radio:checked:hover + label::after,
+.filter-input-radio:checked:focus + label::after{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -35px;
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/svg/radio-on-dark.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
 }
@@ -1756,8 +1825,10 @@ input[type="radio"].visually-hidden {
     padding: 0;
 }
 
-.product-item:hover {
+.product-item:hover,
+.product-item:focus{
     box-shadow: 0 0 10px 3px var(--basic-ultra-light-grey);
+    outline: none;
 }
 
 .product-item-top{
@@ -1988,7 +2059,6 @@ input[type="radio"].visually-hidden {
     text-align: center;
 
     min-width: 38px;
-    /* outline: none; */
     border-radius: 2px;
     border: none;
     margin: 0;
@@ -2005,8 +2075,10 @@ input[type="radio"].visually-hidden {
     border: 1px solid var(--basic-ultra-light-grey);
 }
 
-.paginator-button-enabled:hover{
+.paginator-button-enabled:hover,
+.paginator-button-enabled:focus{
     border-color: var(--basic-light-grey);
+    outline: none;
 }
 
 .paginator-button-enabled:active{
@@ -2017,6 +2089,8 @@ input[type="radio"].visually-hidden {
     color: var(--basic-white);
     background-color: var(--basic-red);
     cursor: auto;
+    user-select: none;
+    outline: none;
 }
 
 .paginator-button-next-page{
