@@ -1110,7 +1110,6 @@ input[type="radio"].visually-hidden {
 .services-type-list button{
     width: 100%;
     border: none;
-    /* outline: none; */
     text-align: left;
     color: inherit;
     background-color: transparent;
@@ -1563,7 +1562,6 @@ input[type="radio"].visually-hidden {
     background-color: var(--basic-background-cream);
     border: none;
     border-bottom: 1px dotted var(--basic-red);
-    outline: none;
 }
 
 .sorting-button:hover{
@@ -1591,12 +1589,10 @@ input[type="radio"].visually-hidden {
     text-transform: uppercase;
     background-color: var(--basic-background-cream);
     border: none;
-    outline: none;
 }
 
 .sorting-button-icon{
     border: none;
-    outline: none;
     background-color: inherit;
 } 
 
@@ -1610,7 +1606,6 @@ input[type="radio"].visually-hidden {
 
 .sorting-button-icon-selected{
     border: none;
-    outline: none;
     background-color: inherit;
 } 
 
@@ -1638,8 +1633,11 @@ input[type="radio"].visually-hidden {
     font-size: 15px;
     line-height: 19px;
     text-transform: uppercase;
-    list-style: none;
-    
+    list-style: none;   
+}
+
+.filter-option label:focus{
+    outline: 1px solid var(--basic-black);
 }
 
 .filter-option label{
@@ -1713,7 +1711,6 @@ input[type="radio"].visually-hidden {
     line-height: 18px;
     text-transform: uppercase;
     background-color: var(--basic-white);
-    outline: none;
     border: none;
     border: 1px solid var(--basic-ultra-light-grey);
     width: 220px;
@@ -1828,7 +1825,7 @@ input[type="radio"].visually-hidden {
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
-    outline: none;
+    /* outline: none; */
     border-radius: 2px;
     width: 135px;
     cursor: pointer;
@@ -1991,7 +1988,7 @@ input[type="radio"].visually-hidden {
     text-align: center;
 
     min-width: 38px;
-    outline: none;
+    /* outline: none; */
     border-radius: 2px;
     border: none;
     margin: 0;
@@ -2421,6 +2418,7 @@ input[type="radio"].visually-hidden {
 }
 
 .popup-added-to-cart{
+    display: none;
     position: relative;
     width: 620px;
     border-top: 7px solid var(--basic-red);
@@ -2516,14 +2514,14 @@ input[type="radio"].visually-hidden {
     opacity: 0.5;
 }
 
-.popup-added-to-cart-close-button::before{
-    content: "";
+.popup-added-to-cart-close-button{
     position: absolute;
     top: 11px;
     right: 11px;
 
     width: 21px;
     height: 21px;
+    border: none;
     background-image: url(../img/svg/icon-close.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
