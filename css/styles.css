@@ -1914,8 +1914,10 @@ input[type="radio"].visually-hidden {
     border-bottom: 3px solid var(--green-bottom);
 }
 
-.add-to-cart:hover{
+.add-to-cart:hover,
+.add-to-cart:focus{
     background-color: var(--succes);
+    outline: none;
 }
 
 .add-to-cart:active{
@@ -1948,9 +1950,11 @@ input[type="radio"].visually-hidden {
     border: 3px solid var(--basic-green);
 }
 
-.add-to-bookmarks:hover{
+.add-to-bookmarks:hover,
+.add-to-bookmarks:focus{
     color: var(--basic-grey);
     border-color: var(--basic-grey);
+    outline: none;
 }
 
 .add-to-bookmarks:active{
