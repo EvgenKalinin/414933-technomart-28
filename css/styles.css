@@ -925,7 +925,7 @@ input[type="radio"].visually-hidden {
     grid-template-rows: 89px auto;
     gap: 20px;
     margin: 0;
-    margin-bottom: 65px;
+    margin-bottom: 70px;
 }
 
 .popular-products-list{
@@ -936,6 +936,10 @@ input[type="radio"].visually-hidden {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.popular-products-list li{
+    position: relative;
 }
 
 
@@ -1242,7 +1246,7 @@ input[type="radio"].visually-hidden {
     list-style: none;
     text-transform: uppercase;
     margin: 0;
-    padding: 17px 0;
+    padding: 20px 0;
 }
 
 .breadcrumbs a{
@@ -1281,7 +1285,7 @@ input[type="radio"].visually-hidden {
     content: "";
     position: absolute;
     left: 0;
-    top: 5px;
+    top: 3px;
     width: 14px;
     height: 12px;
     background-image: url(../img/svg/icon-home.svg);
@@ -1292,8 +1296,8 @@ input[type="radio"].visually-hidden {
 .breadcrumbs-main::after{
     content: "";
     position: absolute;
-    left: 29px;
-    top: 5px;
+    left: 30px;
+    top: 2px;
     width: 8px;
     height: 12px;
     background-image: url(../img/svg/icon-right-small.svg);
@@ -1303,7 +1307,7 @@ input[type="radio"].visually-hidden {
 
 .breadcrumbs-catalog{
     position: relative;
-    margin-left: 25px;
+    margin-left: 12px;
     padding-right: 25px;
 }
 
@@ -1311,7 +1315,7 @@ input[type="radio"].visually-hidden {
     content: "";
     position: absolute;
     left: 69px;
-    top: 5px;
+    top: 2px;
     width: 8px;
     height: 12px;
     background-image: url(../img/svg/icon-right-small.svg);
@@ -1329,7 +1333,7 @@ input[type="radio"].visually-hidden {
     content: "";
     position: absolute;
     left: 97px;
-    top: 5px;
+    top: 2px;
     width: 8px;
     height: 12px;
     background-image: url(../img/svg/icon-right-small.svg);
@@ -1504,6 +1508,7 @@ input[type="radio"].visually-hidden {
     width: 940px;
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 30px;
+    font-weight: normal;
     line-height: 30px;
     color: var(--basic-grey);
     background-color: var(--basic-background);
@@ -1809,6 +1814,7 @@ input[type="radio"].visually-hidden {
 /* Product list */
 
 .catalog-product-layout{
+
     display: grid;
     grid-template-columns: 220px 220px 220px;
     row-gap: 18px;
@@ -1819,16 +1825,24 @@ input[type="radio"].visually-hidden {
     padding: 0;
 }
 
+.catalog-product-layout li{
+    margin: 0;
+    padding: 0;
+}
+
 .product-item{
+    position: relative;
+}
+
+.product-item-link{
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
     width: 220px;
-    min-height: 318px;
+    /* min-height: 318px; */
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
 
     border: 1px solid var(--basic-light-grey);
@@ -1837,7 +1851,7 @@ input[type="radio"].visually-hidden {
 }
 
 .product-item:hover,
-.product-item:focus{
+.product-item-link:focus{
     box-shadow: 0 0 10px 3px var(--basic-ultra-light-grey);
     outline: none;
 }
@@ -1866,7 +1880,7 @@ input[type="radio"].visually-hidden {
 }
 
 
-.product-item h3{
+.product-item-link h3{
     font-family: 'PT Sans', Arial, sans-serif;
     font-size: 18px;
     line-height: 20px;
@@ -1889,7 +1903,7 @@ input[type="radio"].visually-hidden {
     display: block;
 }
 
-.product-item:focus .product-item-buttons{
+.product-item-link:focus + .product-item-buttons{
     display: block;
 }
 
@@ -1907,7 +1921,6 @@ input[type="radio"].visually-hidden {
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
-    /* outline: none; */
     border-radius: 2px;
     width: 135px;
     cursor: pointer;
@@ -1978,6 +1991,7 @@ input[type="radio"].visually-hidden {
     flex-direction: column;
 
     margin: 0;
+    margin-bottom: 20px;
     padding: 0;
 }
 
@@ -2151,7 +2165,7 @@ input[type="radio"].visually-hidden {
 .about-dilivery-info{
     width: 400px;
     margin: 0;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
 }
 
 .about-transport-companies{
@@ -2162,10 +2176,23 @@ input[type="radio"].visually-hidden {
 }
 
 .transport-company-name{
+    position: relative;
     margin: 0;
     margin-bottom: 12px;
     padding: 0;
     padding-left: 37px;
+}
+
+.transport-company-name::before{
+    content: "";
+
+    position: absolute;
+    top: 11px;
+    left: 0;
+
+    width: 25px;
+    height: 2px;
+    background-color: var(--basic-red);
 }
 
 .about-column li{
