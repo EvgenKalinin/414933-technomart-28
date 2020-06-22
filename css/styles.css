@@ -205,7 +205,7 @@ input[type="radio"].visually-hidden {
     width: 100%;
 }
 
-.search-field::placeholder{
+.search-field::-webkit-input-placeholder{
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
@@ -219,7 +219,7 @@ input[type="radio"].visually-hidden {
     color: var(--basic-white);
 }
 
-.search-field::-webkit-input-placeholder{
+.search-field::placeholder{
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
@@ -2053,6 +2053,10 @@ input[type="radio"].visually-hidden {
     z-index: 10;
 }
 
+.new-product-disabled{
+    display: none;
+}
+
 .new-promo-product{
     display: block;
     transform: rotate(45deg);
@@ -2215,6 +2219,7 @@ input[type="radio"].visually-hidden {
 
 
 .address-column-map{
+    display: block;
     outline: none;
     border: none;
     margin: 0;
@@ -2646,7 +2651,7 @@ input[type="radio"].visually-hidden {
 }
 
 .feedback-form-popup{
-    display: none;
+    display: block;
     width: 620px;
     border-top: 7px solid var(--basic-red);
     box-shadow: 0px 4px 20px 0px var(--basic-ultra-light-grey);
@@ -2690,18 +2695,19 @@ input[type="radio"].visually-hidden {
     border-radius: 2px;
 }
 
-.feedback-form input[placeholder]{
-    font-family: 'PT Sans', Arial, sans-serif;
-    font-size: 13px;
-    line-height: 24px;
-    padding-left: 10px;
-}
-
 .feedback-form input::-webkit-input-placeholder {
     color: var(--basic-light-grey);
 }
 
 .feedback-form input:-moz-placeholder {
+    color: var(--basic-light-grey);
+}
+
+.feedback-form input[placeholder]{
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    padding-left: 10px;
     color: var(--basic-light-grey);
 }
 
@@ -2745,13 +2751,6 @@ input[type="radio"].visually-hidden {
     resize: none;
 }
 
-.feedback-form-message-field textarea[placeholder]{
-    font-family: 'PT Sans', Arial, sans-serif;
-    font-size: 13px;
-    line-height: 24px;
-    padding-left: 10px;
-}
-
 .feedback-form-message-field textarea::-webkit-input-placeholder {
     color: var(--basic-light-grey);
 }
@@ -2760,6 +2759,13 @@ input[type="radio"].visually-hidden {
     color: var(--basic-light-grey);
 }
 
+.feedback-form-message-field textarea[placeholder]{
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    color: var(--basic-light-grey);
+    padding-left: 10px;
+}
 
 .feedback-form-bottom{
     display: flex;
