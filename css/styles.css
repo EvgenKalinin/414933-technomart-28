@@ -2509,6 +2509,12 @@ input[type="radio"].visually-hidden {
 
 .popup-map{
     display: none;
+    position: fixed;
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 100;
     width: 940px;
     height: 440px;
     border-top: 7px solid var(--basic-red);
@@ -2516,6 +2522,11 @@ input[type="radio"].visually-hidden {
     background-repeat: no-repeat;
     background-position: -15px -20px;
     box-shadow: 0px 4px 20px 0px var(--basic-ultra-light-grey);
+}
+
+.popup-map-show{
+    display: block;
+    animation: bounce 0.6s;
 }
 
 .popup-map-positioner{
