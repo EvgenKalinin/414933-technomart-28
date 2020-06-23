@@ -2651,7 +2651,7 @@ input[type="radio"].visually-hidden {
 }
 
 .feedback-form-popup{
-    display: block;
+    display: none;
     width: 620px;
     border-top: 7px solid var(--basic-red);
     box-shadow: 0px 4px 20px 0px var(--basic-ultra-light-grey);
