@@ -4,7 +4,6 @@ var backToShopping = document.querySelector(".popup-added-to-cart-continue-shopp
 var addedToCartPopupClose = document.querySelector(".popup-added-to-cart-close-button");
 
 for (let addedToCartPopupLink of addedToCartPopupLinks) {
-    console.log(addedToCartPopupLink);
     addedToCartPopupLink.onclick = function (evt) {
         evt.preventDefault();
         addedToCartPopup.classList.add('popup-added-to-cart-show');

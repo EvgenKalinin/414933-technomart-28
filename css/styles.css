@@ -1115,7 +1115,7 @@ input[type="radio"].visually-hidden {
     background-position: 0 0;
 }
 
-.services-type-list button{
+.service-type{
     width: 100%;
     border: none;
     font-family: 'Cuprum', Arial, sans-serif;
@@ -1124,26 +1124,29 @@ input[type="radio"].visually-hidden {
     font-weight: bold;
     text-align: left;
     color: inherit;
-    background-color: transparent;
     margin: 0;
     padding: 0;
     padding-left: 22px;
     padding-top: 16px;
     padding-bottom: 16px;
     cursor: pointer;
-}
-
-.service-type{
     color: var(--basic-white);
     background-color: var(--basic-grey);
 }
 
-.service-type:hover{
+.service-type:hover,
+.service-type:focus{
+    outline: none;
     background-color: var(--basic-gark-grey);
 }
 
 .sevice-type-selected{
     color: var(--basic-grey);
+    background-color: var(--basic-white);
+}
+
+.sevice-type-selected:hover,
+.sevice-type-selected:focus{
     background-color: var(--basic-white);
 }
 
@@ -1163,6 +1166,10 @@ input[type="radio"].visually-hidden {
 }
 
 .delivery-service{
+    display: none;
+}
+
+.delivery-service-show{
     display: block;
 }
 
@@ -1188,6 +1195,10 @@ input[type="radio"].visually-hidden {
     padding-top: 5px;
 }
 
+.guarantee-service-show{
+    display: block;
+}
+
 .guarantee-service::after{
     content: "";
     position: absolute;
@@ -1211,6 +1222,10 @@ input[type="radio"].visually-hidden {
 
 .credit-service{
     display: none;
+}
+
+.credit-service-show{
+    display: block;
 }
 
 .credit-service::after{
