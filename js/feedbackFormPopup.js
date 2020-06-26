@@ -55,4 +55,4 @@ window.addEventListener("keydown", function(evt) {
             feedbackFormPopup.classList.remove("feedback-form-popup-error");
         }
     }
-})
+});
