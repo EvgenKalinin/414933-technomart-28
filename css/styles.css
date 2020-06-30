@@ -2060,6 +2060,7 @@ input[type="radio"].visually-hidden{
     min-height: 18px;
     color: var(--basic-light-grey);
     text-decoration: line-through;
+    text-align: center;
     margin: 0;
     margin-bottom: 12px;
 }
