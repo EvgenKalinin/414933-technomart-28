@@ -1869,6 +1869,27 @@ input[type="radio"].visually-hidden{
 
 .product-item{
     position: relative;
+    overflow: hidden;
+}
+
+.new-product::after{
+    content: "NEW";
+    transform: rotate(45deg);
+    position: absolute;
+    top:10px;
+    left: 145px;
+    width: 100px;
+    padding: 0px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--basic-white);
+    text-transform: uppercase;
+    text-align: center;
+    background-color: var(--basic-red);
+    z-index: 10;
 }
 
 .product-item-link{
@@ -2061,30 +2082,6 @@ input[type="radio"].visually-hidden{
     min-width: 75px;
     color: var(--basic-white);
     background-color: var(--basic-red);
-}
-
-.new-product{
-    display: none;
-    transform: rotate(45deg);
-    position: absolute;
-    top:10px;
-    left: 145px;
-    width: 100px;
-    padding: 0px;
-    padding-top: 8px;
-    padding-bottom: 5px;
-    font-family: 'Cuprum', Arial, sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-    color: var(--basic-white);
-    text-transform: uppercase;
-    text-align: center;
-    background-color: var(--basic-red);
-    z-index: 10;
-}
-
-.new-product-show{
-    display: block;
 }
 
 .new-promo-product{
