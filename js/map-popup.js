@@ -4,7 +4,7 @@ var mapClose = document.querySelector(".popup-map-close-button");
 
 mapLink.addEventListener("click", function(evt) {
     evt.preventDefault();
-    mapPopup.classList.add('popup-map-show');
+    mapPopup.classList.add("popup-map-show");
 });
 
 mapClose.addEventListener("click", function(evt) {
