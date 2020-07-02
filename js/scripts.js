@@ -8,18 +8,18 @@ var addedToCartPopupClose = document.querySelector(".popup-added-to-cart-close-b
 for (let addedToCartPopupLink of addedToCartPopupLinks) {
     addedToCartPopupLink.onclick = function (evt) {
         evt.preventDefault();
-        addedToCartPopup.classList.add('popup-added-to-cart-show');
+        addedToCartPopup.classList.add("popup-added-to-cart-show");
     };
 };
 
 backToShopping.onclick = function (evt) {
     evt.preventDefault();
-    addedToCartPopup.classList.remove('popup-added-to-cart-show');
+    addedToCartPopup.classList.remove("popup-added-to-cart-show");
 };
 
 addedToCartPopupClose.onclick = function (evt) {
    evt.preventDefault();
-   addedToCartPopup.classList.remove('popup-added-to-cart-show');
+   addedToCartPopup.classList.remove("popup-added-to-cart-show");
 };
 
 window.addEventListener("keydown", function (evt) {
@@ -140,7 +140,7 @@ var mapClose = document.querySelector(".popup-map-close-button");
 
 mapLink.addEventListener("click", function(evt) {
     evt.preventDefault();
-    mapPopup.classList.add('popup-map-show');
+    mapPopup.classList.add("popup-map-show");
 });
 
 mapClose.addEventListener("click", function(evt) {
