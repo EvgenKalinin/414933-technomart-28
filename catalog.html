@@ -5,7 +5,7 @@
     <title>HTML Academy: Техномарт Каталог</title>
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-minimized.css">
   </head>
   <body class="page-body">
     <header class="header">
@@ -143,36 +143,36 @@
                             
                                 <ul>
                                     <li class="filter-option filter-checkbox">
+                                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-item-bosch" value="bosch" checked>
                                         <label for="filter-item-bosch">
-                                            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-item-bosch" value="bosch" checked>
-                                            <span class="checkbox"></span>
-                                            Bosch
+                                                <span class="checkbox"></span>
+                                                Bosch
                                         </label>
                                     </li>
                                     <li class="filter-option filter-checkbox">
-                                        <label for="filter-item-interskol">
-                                            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-item-interskol" value="interskol" checked disabled>
+                                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-item-interskol" value="interskol">
+                                        <label class="testbox" for="filter-item-interskol">
                                             <span class="checkbox"></span>
                                             Интерскол
-                                    </label>
+                                        </label>
                                     </li>
                                     <li class="filter-option filter-checkbox">
+                                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-item-makita" value="makita" checked>
                                         <label for="filter-item-makita">
-                                            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-item-makita" value="makita" checked>
                                             <span class="checkbox"></span>
                                             Makita
                                         </label>
                                     </li>
                                     <li class="filter-option filter-checkbox">
+                                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-item-dewalt" value="dewalt">
                                         <label for="filter-item-dewalt">
-                                            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-item-dewalt" value="dewalt">
                                             <span class="checkbox"></span>
                                             Dewalt
                                         </label>
                                     </li>
                                     <li class="filter-option filter-checkbox">
+                                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-item-hitachi" value="hitachi">
                                         <label for="filter-item-hitachi">
-                                            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="manufacturer" id="filter-item-hitachi" value="hitachi">
                                             <span class="checkbox"></span>
                                             Hitachi
                                         </label>
@@ -186,11 +186,17 @@
                                 <ul>
                                     <li class="filter-option filter-radio">
                                         <input class="visually-hidden filter-input-radio"  type="radio" name="power-options" id="option-filter-wireless" value="wireless" checked>
-                                        <label for="option-filter-wireless">Аккумуляторные</label>
+                                        <label for="option-filter-wireless">
+                                            <span class="radio"></span>
+                                            Аккумуляторные
+                                        </label>
                                     </li>
                                     <li class="filter-option filter-radio">
                                         <input class="visually-hidden filter-input-radio" type="radio" name="power-options" id="option-filter-wireline" value="wireline">
-                                        <label for="option-filter-wireline">Сетевые</label>
+                                        <label for="option-filter-wireline">
+                                            <span class="radio"></span>
+                                            Сетевые
+                                        </label>
                                     </li>
                                 </ul>
                             
