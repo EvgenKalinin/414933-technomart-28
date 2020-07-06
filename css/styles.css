@@ -389,6 +389,7 @@ input[type="radio"].visually-hidden{
 }
 
 .header-address{
+    max-width: 270px;
     margin: 0;
     padding: 0;
     padding-left: 10px; 
@@ -457,6 +458,7 @@ input[type="radio"].visually-hidden{
 
 .catalog-user-navigation{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     width: 300px;
     margin: 0;
@@ -464,7 +466,7 @@ input[type="radio"].visually-hidden{
 
 .catalog-user-profile{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     list-style: none;
     background-color: var(--basic-white);
@@ -587,6 +589,8 @@ input[type="radio"].visually-hidden{
     padding: 0;
     padding-top: 17px;
     padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
@@ -1171,18 +1175,9 @@ input[type="radio"].visually-hidden{
 
 .delivery-service-show{
     display: block;
-}
-
-.delivery-service::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 468px;
-    height: 261px;
     background-image: url(../img/delivery-truck.png);
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: bottom right;
 }
 
 .delivery-service p{
@@ -1195,18 +1190,9 @@ input[type="radio"].visually-hidden{
 
 .guarantee-service-show{
     display: block;
-}
-
-.guarantee-service::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: -10px;
-    width: 389px;
-    height: 283px;
     background-image: url(../img/guarantee-medal.png);
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: bottom right;
 }
 
 .guarantee-service h3{
@@ -1223,18 +1209,9 @@ input[type="radio"].visually-hidden{
 
 .credit-service-show{
     display: block;
-}
-
-.credit-service::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: -10px;
-    width: 465px;
-    height: 285px;
     background-image: url("../img/credit-slip.png");
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: bottom right;
 }
 
 .credit-service p{
@@ -1551,12 +1528,14 @@ input[type="radio"].visually-hidden{
 
 .sorting-buttons-layout{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     min-width: 355px;
 }
 
 .sorting-button-icon-layout{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     min-width: 40px;
 }
@@ -1848,6 +1827,7 @@ input[type="radio"].visually-hidden{
     align-items: center;
     box-sizing: border-box;
     width: 220px;
+    height: 100%;
     margin: 0;
     padding: 0;
     border: 1px solid var(--basic-border-grey);
@@ -2311,6 +2291,7 @@ input[type="radio"].visually-hidden{
 
 .footer-site-navigation{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 545px;
     margin: 0;
@@ -2326,6 +2307,7 @@ input[type="radio"].visually-hidden{
 
 .footer-section-navigation{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     order: 1;
     width: 525px;
@@ -2385,10 +2367,10 @@ input[type="radio"].visually-hidden{
 .social-links{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 135px;
+    justify-content: center;
+    width: 140px;
     padding: 0;
-    padding-left: 30px;
+    padding-left: 26px;
     padding-top: 15px;
     margin: 0;
 }
@@ -2398,6 +2380,8 @@ input[type="radio"].visually-hidden{
     width: 42px;
     height: 42px;
     margin: 0;
+    margin-left: 2px;
+    margin-right: 2px;
     padding: 0;
     color: var(--basic-white);
     background-color: var(--basic-super-dark-grey);
@@ -2433,6 +2417,7 @@ input[type="radio"].visually-hidden{
 
 .feedback-developed-wrapper{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 300px;
 }
