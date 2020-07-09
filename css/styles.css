@@ -150,6 +150,8 @@ input[type="radio"].visually-hidden{
     padding: 0;
     padding-top: 9px;
     padding-bottom: 9px;
+    padding-left: 18px;
+    padding-right: 13px;
 }
 
 .header-top-link,
@@ -260,9 +262,9 @@ input[type="radio"].visually-hidden{
 }
 
 .header-link-bookmarks{
-    flex-grow: 1;
+    /* flex-grow: 1; */
     padding-left: 40px;
-    margin-right: 10px;
+    padding-right: 35px;
 }
 
 .header-link-bookmarks::before{
@@ -287,15 +289,16 @@ input[type="radio"].visually-hidden{
 }
 
 .header-link-cart{
-    flex-grow: 1;
-    padding-left: 37px;
+    /* flex-grow: 1; */
+    padding-left: 35px;
+    padding-right: 25px;
 }
 
 .header-link-cart::before{
     content: "";
     position: absolute;
     top: 13px;
-    left: 15px;
+    left: 13px;
     width: 17px;
     height: 17px;
     background-image: url(../img/svg/icon-cart.svg);
@@ -321,7 +324,7 @@ input[type="radio"].visually-hidden{
 }
 
 .order{
-    flex-grow: 1;
+    /* flex-grow: 1; */
     min-width: 120px;
     text-align: center;
     background-color: var(--basic-green);
@@ -525,15 +528,31 @@ input[type="radio"].visually-hidden{
     fill: var(--basic-light-grey);
 }
 
-.nolist{
-    list-style: none;
-}
-
 .catalog-user-links{
     display: flex;
     margin: 0;
     padding: 0;
     padding-left: 45px;
+}
+
+.catalog-user-links li{
+    position: relative;
+    list-style: none;
+}
+
+.catalog-user-links li:not(:first-child){
+    padding-left: 17px;
+}
+
+.catalog-user-links li:not(:first-child)::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--basic-grey);
 }
 
 .catalog-user-links a{
@@ -553,7 +572,7 @@ input[type="radio"].visually-hidden{
 
 .catalog-user-link-order{
     margin: 0;
-    margin-right: 30px;
+    margin-right: 14px;
 }
 
 .header-navigation{
@@ -1421,7 +1440,7 @@ input[type="radio"].visually-hidden{
 
 .price-filter{
     padding: 0;
-    margin-bottom: 15px;
+    margin-bottom: 13px;
     border-bottom: 1px solid var(--basic-light-grey);
 
 }
@@ -1854,7 +1873,7 @@ input[type="radio"].visually-hidden{
     height: 165px;
     margin: 0;
     margin-top: 1px;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     padding: 0;
     object-fit: contain;
     background-color: var(--basic-white);
