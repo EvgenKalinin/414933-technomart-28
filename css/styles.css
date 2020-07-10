@@ -1518,7 +1518,7 @@ input[type="radio"].visually-hidden{
     align-items: center;
     margin: 0;
     margin-bottom: 28px;
-    padding: 8px 20px;
+    padding: 8px 18px;
 }
 
 .section-subtitle{
@@ -1539,31 +1539,33 @@ input[type="radio"].visually-hidden{
 .sorting-buttons-layout{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     min-width: 355px;
-    padding-right: 10px;
+    padding-right: 35px;
+    margin-left: 10px;
 }
 
 .sorting-button-icon-layout{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     min-width: 40px;
+    margin-left: 10px;
 }
 
 .sorting-button{
     margin: 0;
-    margin-left: 5px;
     padding: 0;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
-    color: var(--basic-black);
-    opacity: 0.3;
+    color: var(--basic-input-border-grey);
     background-color: var(--basic-background-cream);
     border: none;
     border-bottom: 1px dotted var(--basic-red);
+}
+
+.sorting-button:not(:last-child){
+    margin-right: 68px;
 }
 
 .sorting-button:hover,
@@ -1572,7 +1574,6 @@ input[type="radio"].visually-hidden{
     font-size: 13px;
     line-height: 18px;
     color: var(--basic-black);
-    opacity: 1;
     text-transform: uppercase;
     border-bottom: 1px solid var(--basic-red);
     outline: none;
@@ -1620,13 +1621,17 @@ input[type="radio"].visually-hidden{
     padding: 0;
 }
 
+.sorting-button-icon-layout button:not(:last-child){
+    margin-right: 20px;
+}
+
 .sorting-button-icon{
     border: none;
     background-color: inherit;
 } 
 
 .sorting-button-icon path{
-    fill: var(--basic-light-grey);
+    fill: var(--basic-input-border-grey);
 }
 
 .sorting-button-icon:hover path,
@@ -2310,14 +2315,16 @@ input[type="radio"].visually-hidden{
 .footer-site-navigation{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     width: 545px;
     margin: 0;
     margin-top: 37px;
 }
 
+.footer-site-navigation li:not(:last-child){
+    margin-right: 58px;
+}
+
 .footer-site-navigation a{
-    margin-right: 5px;
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
@@ -2327,15 +2334,14 @@ input[type="radio"].visually-hidden{
 .footer-section-navigation{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     order: 1;
     width: 525px;
     margin: 0;
     margin-top: 6px;
 }
 
-.footer-section-navigation  a{
-    margin-right: 5px;
+.footer-section-navigation  li:not(:last-child){
+    margin-right: 59px;
 }
 
 .footer-section-navigation a[href]{
