@@ -16,6 +16,7 @@
     --basic-white: #ffffff;
     --basic-black: #000000;
     --basic-pale-yellow: #99896e;
+    --special-section-title-background: #F9F5F0;
     --special-yellow: #ffbf47;
     --special-yellow-hover: #eec16d;
     --special-yellow-active: #e5b864;
@@ -966,7 +967,7 @@ input[type="radio"].visually-hidden{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--basic-background-cream);
+    background-color: var(--special-section-title-background);
 }
 
 .popular-products-title-wrap a{
@@ -1000,7 +1001,7 @@ input[type="radio"].visually-hidden{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--basic-background-cream);
+    background-color: var(--special-section-title-background);
 }
 
 .popular-manufacturers-title-wrap h2{
