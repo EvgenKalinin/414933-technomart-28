@@ -1438,7 +1438,6 @@ input[type="radio"].visually-hidden{
     padding: 0;
     margin-bottom: 13px;
     border-bottom: 1px solid var(--basic-light-grey);
-
 }
 
 .price-filter legend{
